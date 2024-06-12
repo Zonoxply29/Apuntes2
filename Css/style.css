@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Jaro";
+    src: url("../Fonts/Jaro-Regular-VariableFont_opsz.ttf");
+}
+p{
+    font-family: "Jaro";
+}

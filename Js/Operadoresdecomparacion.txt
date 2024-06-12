@@ -1,0 +1,22 @@
+
+Igualdad (==) Verifica la igualdad de dos expresiones sin tener en cuenta el tipo de dato.
+Por ejemplo: 2 == "2" devuelve True
+
+Igualdad estricta (===) Hace lo mismo que el anterior, pero verificando también que coincidan los tipos de datos.
+Por ejemplo: 2 === "2" devuelve False
+
+Desigualdad (!=) Funciona de la misma forma que la igualdad, pero negándola.
+Por ejemplo: 2 != "2" devuelve False
+
+Desigualdad estricta (!==) Lo mismo que la igualdad estricta, pero negándola.
+Por ejemplo: 2 !== "2" devuelve True
+
+OPERADORES
+
+Mayor que (>)
+
+Mayor o igual que (>=)
+
+Menor que (<)
+
+Menor o igual que (<=)
