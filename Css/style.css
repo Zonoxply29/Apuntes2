@@ -1,7 +1,46 @@
+/*Mobile First*/
+/*Estilos Generales*/
+*{
+    margin: 0;
+}
+
 @font-face {
     font-family: "Jaro";
     src: url("../Fonts/Jaro-Regular-VariableFont_opsz.ttf");
 }
 p{
     font-family: "Jaro";
+}
+ /*Estilo HEADER*/
+ header{
+    border: 2px solid gold;
+
+} 
+.logo{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    border: 2px solid green;
+    
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0;
+    border: 2px solid red;
+}
+li{
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    color: black;
 }
