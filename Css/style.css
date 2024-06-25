@@ -20,7 +20,10 @@ p{
     border: 2px solid black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+}
+img{
+    border: 2px solid black;
 }
 .menu{
     border: 2px solid green;
@@ -43,4 +46,31 @@ a{
     font-weight: 600;
     font-style: italic;
     color: black;
+}
+a:hover{
+    font-size: 48px;
+    color:deepskyblue;
+    transition: 1s;
+}
+
+/*DESKTOP DESIGN sirve para dar diseño cuando cambie el valor de la pantalla*/
+@media only screen and (min-width:600px) {
+    body{
+        background-color: darkcyan;
+    }
+    header{
+        display: flex;
+    }
+    .logo{
+        width: 30%;
+    }
+    .menu{ 
+        width:70% ;
+    }
+    ul{
+       display: flex; 
+       align-items: center;
+       justify-content:space-around;
+       height: 100%;
+    }
 }
