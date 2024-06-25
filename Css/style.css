@@ -47,6 +47,12 @@ a{
     font-style: italic;
     color: black;
 }
+a:hover{
+    font-size: 48px;
+    color:deepskyblue;
+    transition: 1s;
+}
+
 /*DESKTOP DESIGN sirve para dar diseño cuando cambie el valor de la pantalla*/
 @media only screen and (min-width:600px) {
     body{
