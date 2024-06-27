@@ -3,52 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
     <title>Git</title>
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <div>
-                <a href="index.html">
+            <a href="index.html">
                 <img src="/img/logo-javascript.png" alt="logo-javascript" height="150" width="150">
-                </a>
-            </div>
+            </a>
         </div>   
         <div class="menu">
                 <ul>
                     <li>
-                        <a href="index.html">HTML</a>
+                        <a href="index.html">HTML
+                        <i class="fa-brands fa-html5 fa-xl"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="css.html">CSS</a>
+                        <a href="css.html">CSS
+                        <i class="fa-brands fa-css3-alt fa-xl"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="git.html">Git</a>
+                        <a href="git.html">Git
+                        <i class="fa-brands fa-github fa-xl"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="linux.html">Linux</a>
+                        <a href="linux.html">Linux
+                        <i class="fa-brands fa-linux fa-xl"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript.html">Javascript</a>
+                        <a href="javascript.html">Javascript
+                        <i class="fa-brands fa-js fa-xl"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="sass.html">SASS</a>
+                        <a href="sass.html">SASS
+                        <i class="fa-brands fa-sass fa-xl"></i>   
+                        </a>
                     </li>
                 </ul>
         </div>
     </header>
-        <ul>
+        <ul class="apuntes">
             <li><b>git init</b>- inicar un proyecto</li>
             <li><b>git status</b> - Estatus del proyecto</li>
             <li><b>git add -A</b> - agregas todos los archivos a la zona de trabajo (Stage Area)</li>
-            <li><Strong>git add nombreDelDocumento</Strong> Agrega un archivo en especifico a la zona de trabajo</li>
             <li><b>git commit -m ""</b> - Agregas un comentario sobre lo que hiciste en los archivos </li>
             <li><b>git branch NombreDeLaRama</b> - Crea una Rama</li>
             <li><b>git branch</b> - Muestra una lista de todas las rama que tengo</li>
             <li><b>git checkout NombreDeLaRama</b> - Te mueve a el  nombre de la rama que pongas</li>
             <li><b>git merge NombreDeLaRama</b> - Fusiona las ramas</li>
-            <li><Strong>git push origin NombredelaRama</Strong>Agrega los archivos a la rama que desea</li>
+            <li><b>git pull origin Nombre de la Rama</b>- Descarga las actualizaciones de la Rama</li>
         </ul>
 </body>
+<script src="Js/all.min.js"></script>
 </html>
