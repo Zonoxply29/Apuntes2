@@ -30,12 +30,13 @@ img{
     
 }
 ul{
+    display: flex;
     list-style-type: none;
     padding-inline-start: 0;
     border: 2px solid red;
+    height: 100%;
 }
 li{
-    border: 2px solid black;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -47,12 +48,37 @@ a{
     font-style: italic;
     color: black;
 }
-a:hover{
+
+a:hover.hover-html{
+    font-size: 48px;
+    color: #FC490B;
+    transition: 1s;
+}
+a:hover.hover-css{
     font-size: 48px;
     color:deepskyblue;
     transition: 1s;
 }
-
+a:hover.hover-javascript{
+    font-size: 48px;
+    color:#F0DB4F;
+    transition: 1s;
+}
+a:hover.hover-git{
+    font-size: 48px;
+    color:#F05033;
+    transition: 1s;
+}
+a:hover.hover-linux{
+    font-size: 48px;
+    color:#FDFDFB;
+    transition: 1s;
+}
+a:hover.hover-sass{
+    font-size: 48px;
+    color:#CE679A;
+    transition: 1s;
+}
 /*DESKTOP DESIGN sirve para dar diseño cuando cambie el valor de la pantalla*/
 @media only screen and (min-width:600px) {
     body{
@@ -72,5 +98,10 @@ a:hover{
        align-items: center;
        justify-content:space-around;
        height: 100%;
+    }
+    ul.apuntes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start ;
     }
 }
