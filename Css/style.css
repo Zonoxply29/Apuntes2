@@ -3,10 +3,16 @@
 *{
     margin: 0;
 }
-
+body{
+    background-image: url('../img/ignasi_pattern_s.png');
+}
 @font-face {
     font-family: "Jaro";
     src: url("../Fonts/Jaro-Regular-VariableFont_opsz.ttf");
+}
+h1{
+    background-color: #F0DB4F;
+
 }
 p{
     font-family: "Jaro";
@@ -43,47 +49,47 @@ li{
 }
 a{
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     font-style: italic;
     color: black;
+    transition: 2s;
+    display: inline-block;
 }
 
 a:hover.hover-html{
-    font-size: 48px;
+    transform: scale(1.5);
     color: #FC490B;
     transition: 1s;
 }
 a:hover.hover-css{
-    font-size: 48px;
+    transform: scale(1.5);
     color:deepskyblue;
     transition: 1s;
 }
 a:hover.hover-javascript{
-    font-size: 48px;
+    transform: scale(1.5);
     color:#F0DB4F;
     transition: 1s;
 }
 a:hover.hover-git{
-    font-size: 48px;
+    transform: scale(1.5);
     color:#F05033;
     transition: 1s;
 }
 a:hover.hover-linux{
-    font-size: 48px;
+    transform: scale(1.5);
     color:#FDFDFB;
     transition: 1s;
 }
 a:hover.hover-sass{
-    font-size: 48px;
+    transform: scale(1.5);
     color:#CE679A;
     transition: 1s;
 }
 /*DESKTOP DESIGN sirve para dar diseño cuando cambie el valor de la pantalla*/
 @media only screen and (min-width:600px) {
-    body{
-        background-color: darkcyan;
-    }
+
     header{
         display: flex;
     }
