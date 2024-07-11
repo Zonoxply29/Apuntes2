@@ -12,7 +12,11 @@ body{
 }
 h1{
     background-color: #F0DB4F;
+    display: inline-block;
 
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 p{
     font-family: "Jaro";
