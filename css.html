@@ -36,6 +36,65 @@
                 </ul>
         </div>
     </header>
-    
+    <section class="imagen-header">
+
+    </section>
+    <section>
+        <h2>Propiedades de CSS</h2>
+        <hr>
+        <h2>Propiedades para texto</h2>
+        <ul class="apuntes">
+            <li><strong><i>font-size</i></strong> altera el tamaño del texto y se define en pixeles</li>
+            <li><strong><i>font-family</i></strong>agrega una tipografia al texto</li>
+            <li><strong><i>text-align</i></strong>cuenta con varias propiedades para alinear el texto en diferentes formas,la mas usada es <b>center</b></li>
+            <li><strong><i>text-decoration</i></strong>Agrega un formato en el texto, las tres mas usadas son <span class="line-through">line-throught</span>, <span class="underline">underline</span>, none </li>
+            <li><strong><i>font-weight</i></strong>Especifica el grueso de la letra, se recomienda ponerle 600 u 800 <b>NO LLEVA PIXELES</b></li>
+            <li><strong><i>font-style</i></strong>Permite cambiar entre los estilos de letra Italic,Normal,Oblicual</li>
+            <li><strong><i>color</i></strong>Da color al texto acepta numeros hexadecimal o colores escritos</li>
+        </ul>
+        <hr>
+        <h2>Propiedades background</h2>
+        <ul class="apuntes">
+            <li><strong><i>background-color</i></strong>Permite agregar un color al fondo acepta numeros hexadecimal o colores escritos</li>
+            <li><strong><i>background-image</i></strong>Permite agregar una imagen al fondo con una ruta "url('');"</li>
+            <li><strong><i>background-position</i></strong>Define la posicion inicial de el fondo</li>
+            <li><strong><i>background-repeat</i></strong>El mas utilizado es <b>no-repeat</b>, esto debido a que el navegador rellena los espacios vacios repitiendo la imagen tanto en vertical como horizontal,
+            por eso existen tambien las propiedades <b>repeat-x , repeat-y</b> para que <b>NO</b> repitan la imagen en el eje x o el eje y </li>    
+        </ul>
+        <hr>
+        <h2>Propiedades para tamaños de contenedores</h2>
+        <ul class="apuntes">
+            <li><strong><i>height</i></strong> Define la altura de el contenedor y se puede ocupar px, vh o porcentajes</li>
+            <li><strong><i>width</i></strong> Define el ancho de el contender y se puede ocupar px, vh o porcentajes</li>
+        </ul>
+        <hr>
+        <h2>Codigo para media Queries</h2>
+          <div> 
+                @media only screen and (min-width:600px) {
+
+                header{
+                    display: flex;
+                }
+                .logo{
+                    width: 30%;
+                }
+                .menu{ 
+                    width:70% ;
+                }
+                ul{
+                   display: flex; 
+                   align-items: center;
+                   justify-content:space-around;
+                   height: 100%;
+                }
+                ul.apuntes{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start ;
+                }
+            }
+
+        </div> 
+    </section>
 </body>
 </html>
