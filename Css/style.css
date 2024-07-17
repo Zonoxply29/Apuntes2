@@ -52,10 +52,10 @@ li{
     margin-bottom: 10px;
 }
 a{
-    text-decoration: none;
+    text-decoration:none;
     font-size: 18px;
     font-weight: 600;
-    font-style: italic;
+    font-style:italic;
     color: black;
     transition: 2s;
     display: inline-block;
@@ -103,6 +103,31 @@ label{
     font-family: Arial, Helvetica, sans-serif;
     background-color:orange;
     cursor: pointer;
+}
+/*                                      ARCHIVO CSS.HTML                            */
+span.underline{
+    color: chartreuse;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+span.line-through{
+    color: blue;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+section.imagen-header{
+    background-image: url('../img/Css_image.jpg');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    height: 50vh;
+}
+p.codigo-queries{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
 }
 
 /*DESKTOP DESIGN sirve para dar diseño cuando cambie el valor de la pantalla*/
