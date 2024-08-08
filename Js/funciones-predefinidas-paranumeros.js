@@ -69,5 +69,23 @@ console.log(typeof Number.parseInt(numero))
 
 */
 
+//crear una funcion que cuando la ejecute me imprima un numero aleatorio del 1 al 100 // funcion flecha
+/*
+
+ let numeros = (numero)=>{
+   numero = Math.random()
+   console.log(numero)
+    }
+
+    numeros()
+    
+RESPUESTA CORRECTA
+
+let numeros = () => Math.random()*100
+ 
+console.log(numeros())
+
+*/
+
 
 
