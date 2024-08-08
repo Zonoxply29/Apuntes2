@@ -1,7 +1,10 @@
 /*
 
+NUNCA OCUPAR UNA FUNCION FLECHA DENTRO DE UN OBJETO PORQUE VA APUNTAR A WINDOW EL PADRE DE TODAS LAS FUNCIONES
 
 console.log(window.document)*/
+
+// Una funcion declarada va aparecer en el objeto Window que es donde se encuentran todas las Funciones de JS//
 
 /*FUNCION DECLARADA
 function saludar(){
