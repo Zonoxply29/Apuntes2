@@ -25,6 +25,32 @@ for (const element of paises.entries()) {
 */
 
 const paises = ["Mexico","Canada","Colombia","España"]
-for (const element of paises.entries()) {
+for( let element of paises){
     console.log(element)
 }
+let municipios = ["Ecatepec","Neza","Chalco","Tecamac"]
+for(element of municipios){
+    console.log(element)
+}
+let palabra = "Hola mundo"
+for(const letras of palabra){
+    console.log(letras)
+}
+
+//OBTENIENDO VALORES DE UN OBJETO
+let perro ={
+    nombre:"Solovino",
+    edad:2
+}
+
+for(let valores of Object.values(perro)){//values solo obtiene los valores de las propiedades
+    console.log(valores)
+}
+// Solovino
+//2
+
+for(let [key,value] of Object.entries(perro)){
+    console.log(key,value)
+}
+//nombre Solovino
+//edad

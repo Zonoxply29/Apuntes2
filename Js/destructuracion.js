@@ -67,7 +67,7 @@ let paises =["Mexico","Japon","España","Rusia","China"]
     console.log(imprimir({a:10 , b:20 }))
 ---------------------------------------------------------------------------------------------------------------------
 
-    UNA FUNCION QUE ESTA TOMANDO LOS VALORES DEL CONSOLE LOG Y LOS MUESTA INDEPENDIENTEMENTE QUE EN EL OBJETO DE LA FUNCION 
+    UNA FUNCION QUE ESTA TOMANDO LOS VALORES DEL CONSOLE LOG Y LOS MUESTRA INDEPENDIENTEMENTE QUE EN EL OBJETO DE LA FUNCION 
     SE HAYAN DECLARADO
 
     function imprimir({a = true , b = false, c=50 , d = []}){
@@ -78,4 +78,3 @@ let paises =["Mexico","Japon","España","Rusia","China"]
 
 
 */
-
