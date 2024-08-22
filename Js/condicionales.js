@@ -258,5 +258,25 @@ imprima de 5am a 11am es buenos dias
  De 12pm a 18pm buenas tardes,
  19pm hasta 24pm son buenas noches,
  si es un numero no valido esa hora no es valida
+----------------------------------------------------------
+Ejercicios que me encontre en internet
+
+Escribe un programa que muestre por consola (con un console log) los
+números de 1 a 100 (ambos incluidos), sustituyendo los siguientes:
+Múltiplos de 3 por la palabra "fizz".
+Múltiplos de 5 por la palabra "buzz".
+Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
+ 
+for(i=0; i<=100; i++){
+    if(i%3 == 0 && i%5 ==0){
+        console.log(i +" "+ "fizzbuzz")
+    }else if(i%3 == 0){
+        console.log(i + " "+ "fizz")
+    }else if(i%5 == 0 ){
+        console.log(i+ " "+ "buzz")
+    }else{
+        console.log(i)
+    }
+}
 */
 
