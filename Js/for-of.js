@@ -21,20 +21,30 @@ const paises = ["Mexico","Canada","Colombia","España"]
 for (const element of paises.entries()) {
     console.log(element)
 }
-    
+
+//OBTENIENDO VALORES DE UN OBJETO-Ejercicio que yo busque
+let perro ={
+    nombre:"Solovino",
+    edad:2
+}
+
+for(let valores of Object.values(perro)){//values solo obtiene los valores de las propiedades
+    console.log(valores)
+}
+// Solovino
+//2
+
+for(let [key,value] of Object.entries(perro)){//en este caso obtiene tanto el nombre de la propuedad y sus valores
+    console.log(key,value)
+}
+//nombre Solovino
+//edad 2
+
 */
 
 const paises = ["Mexico","Canada","Colombia","España"]
 for( let element of paises){
     console.log(element)
-}
-let municipios = ["Ecatepec","Neza","Chalco","Tecamac"]
-for(element of municipios){
-    console.log(element)
-}
-let palabra = "Hola mundo"
-for(const letras of palabra){
-    console.log(letras)
 }
 
 //OBTENIENDO VALORES DE UN OBJETO
@@ -49,8 +59,8 @@ for(let valores of Object.values(perro)){//values solo obtiene los valores de la
 // Solovino
 //2
 
-for(let [key,value] of Object.entries(perro)){
+for(let [key,value] of Object.entries(perro)){//en este caso obtiene tanto el nombre de la propuedad y sus valores
     console.log(key,value)
 }
 //nombre Solovino
-//edad
+//edad 2
