@@ -75,6 +75,26 @@ let paises =["Mexico","Japon","España","Rusia","China"]
     }
 
     console.log(imprimir({a:10 , b:20 }))
+--------------------------------------------------------------------------------------------------------------------
+DESTRUCTURACION QUE YO HICE - Funcion Flecha
 
+let cachorros = ({a = "Crispin", b = "Solovino" , c = "Railey"} = {} ) =>{
+    return[a,b,c]
+}
+console.log(cachorros()) // Crispin , Solovino , Railey
+console.log(cachorros({a:"Firulais"})) // Firulais, Solovino , Railey
+
+A diferencia de los anteriores estoy haciendo una destructuracion con una funcion flecha en la que me di cuenta que tengo que 
+retornar un objeto {} despues de declarar los valores del objeto para que al momento que se mande a imprimir y si los muestra 
+independientemente que en el objeto se haya declarado
+
+Sin Argumentos: Al llamar a la función sin argumentos, se utiliza el objeto vacío por defecto {}, 
+lo que hace que los valores por defecto de a, b y c se apliquen.
 
 */
+
+let cachorros = ({a = "Crispin", b = "Solovino" , c = "Railey"} = {} ) =>{
+    return[a,b,c]
+}
+console.log(cachorros()) // Crispin , Solovino , Railey
+console.log(cachorros({a:"Firulais"})) // Firulais, Solovino , Railey

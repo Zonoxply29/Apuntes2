@@ -30,7 +30,8 @@ Number()
 Boolean()
 Date()
 
-Array.of
+Array.of = indica el tamaño de tu array
+
 let cadena = Array.of("Mexico","Canada","USA")
 console.log(cadena)
 
@@ -55,8 +56,8 @@ console.log(mascotas)
 
 let mascotas =["Perro","Gato","Ajolote","Pajaro","Ornitorinco","Tucan"]
 let elementos_borrados = mascotas.splice(1,4)
-console.log(mascotas)
-console.log(elementos_borrados)
+console.log(mascotas) // los que no se borraron
+console.log(elementos_borrados) // los que se borraron
 
 .indexOf = muestra la posicion en que se encuentra el valor que buscas
 
