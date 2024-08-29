@@ -123,8 +123,7 @@ if(true){
 console.log(a);
 
 ---------------------------------------------------------------------
- TAREA : HACER ESTE EJERCICIO EN FUNCION 
-    
+
  let dias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
     
     let diaseleccionado = 4;
@@ -146,6 +145,33 @@ console.log(a);
     }else (diaseleccionado == Number){
         console.log("Los números no son válidos para este ejercicio")
     }
+
+TAREA : HACER ESTE EJERCICIO EN FUNCION 
+
+/////    CONDICIONAL EN UNA FUNCION OCUPANDO UN OBJETO MAPEANDO LOS DIAS DE LA SEMANA   /////
+let diaseleccionados = (dia) =>{
+        // Se define un objeto 'dias' que mapea los días de la semana a sus respectivos mensajes
+    let dias ={
+        lunes: "Hoy es lunes",
+        martes:"Hoy es Martes",
+        miercoles:"Hoy es Miercoles",
+        jueves: "Hoy es jueves",
+        viernes: "Hoy es viernes",
+        sabado:"Hoy es sabado",
+        domingo:"Hoy es domingo"
+    };
+    // Se verifica si el 'dia' proporcionado existe como una clave en el objeto 'dias'
+    if(dias[dia]){
+         // Si existe, se imprime el mensaje correspondiente al día
+        console.log(dias[dia]) // que toma el dia del objeto mediante el parametro dia
+    }else{
+        console.log("El dia no es valido para el ejercicio") // si se ingresa otro dato que no sea el nombre del dia imprime el error
+    }
+}
+
+diaseleccionados(("lunes"))
+
+
 -----------------------------------------------------------------------------------------
 
 let dias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
@@ -280,3 +306,25 @@ for(i=0; i<=100; i++){
 }
 */
 
+/////    CONDICIONAL EN UNA FUNCION OCUPANDO UN OBJETO MAPEANDO LOS DIAS DE LA SEMANA   /////
+let diaseleccionados = (dia) =>{
+        // Se define un objeto 'dias' que mapea los días de la semana a sus respectivos mensajes
+    let dias ={
+        lunes: "Hoy es lunes",
+        martes:"Hoy es Martes",
+        miercoles:"Hoy es Miercoles",
+        jueves: "Hoy es jueves",
+        viernes: "Hoy es viernes",
+        sabado:"Hoy es sabado",
+        domingo:"Hoy es domingo"
+    };
+    // Se verifica si el 'dia' proporcionado existe como una clave en el objeto 'dias'
+    if(dias[dia]){
+         // Si existe, se imprime el mensaje correspondiente al día
+        console.log(dias[dia]) // que toma el dia del objeto mediante el parametro dia
+    }else{
+        console.log("El dia no es valido para el ejercicio") // si se ingresa otro dato que no sea el nombre del dia imprime el error
+    }
+}
+
+diaseleccionados(("lunes"))

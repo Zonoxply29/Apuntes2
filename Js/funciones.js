@@ -258,6 +258,11 @@ FUNCIONES ANONIMAS AUTOINVOCADAS
      !function (){
     console.log("hola mundo")
      } ()
+    
+     MANERA 5(Unaria)
+      +function (){
+    console.log("hola mundo")
+     } ()
 --------------------------------------------------------------------------------------------
 MANERA COMUN DE DECLARAR UNA FUNCION DENTRO DE UN OBJETO
 let persona ={
@@ -304,3 +309,4 @@ console.log("antes de actualizar",usuarioriginal)
 
 actualizarusuario(usuarioriginal)
 console.log("despues de actualizar",usuarioriginal)
+
