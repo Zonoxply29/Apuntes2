@@ -1,0 +1,135 @@
+
+Que es JavaScript - Es un lenguaje de alto nivel y es multiproposito y tiene un comportamiento en los sitios web
+
+Que es un Lenguaje de alto Nivel = Es un lenguaje de Programacion si es facil de leer y escribir para los humanos, utilizado 
+una sintaxis y estructura que son mas abstractas y alejadas del hardwere de la computadora estos lenguajes ayudan a los programadores
+a escribir codigo en forma mas cercana a lenguaje natural o logica humana
+
+var tiene un alcance de funcion por eso la sobrescribe y se usaba tradicionalmente para declarar variables
+
+let y const - tiene un alcance de bloque la diferencia clave entre let y const
+let permite "reasignar" valor NO redeclarar por eso marca error cuando vuelves a usar let
+
+Cual es la diferencia entre Null y Undefined
+
+null es un valor que se asigna explisitamente a una variables
+
+Undefined = Que una variable a sido declarada pero no tiene un valor 
+y JS asigna el valor de una de las variables declaradas y que no se han inicalizado
+
+///////////////// Tipos de datos preferenciales /////////////////
+
+Objeto -> base de todos los tipos de datos en JS
+
+Array -> Lista ordenada de elementos
+
+Set -> Es una coleccion de valores unicos 
+
+Map -> Una coleccion de pasos 
+
+Function -> Son objetos asignados a variables y que toman una referencia
+
+Que es un Scope -> Es el contexto en el cual se definen las variables y funciones determinando la accesibilidad y visualidad
+de esas variables y funciones en diferentes partes del codigo
+
+Cuales son los Scope en JS
+
+Global Scope : Los variables y funciones son accesibles de cualquier parte del codigo 
+
+Funciton Scope : Las variables declaradas dentro de la funcion son solo accesibles dentro de la funcion
+
+Blockscope : stas variables solo son accesibles dentro del bloque en el que fueron declaradas, como dentro de un par de llaves {}.
+ Como el If, for , While
+
+//////////////////////////////////////////////////////////////////////////////
+ Operadores Ternarios :
+ 
+ If Short -> El operador ternario es un operador condicional que acepta tres operandos se utiliza con frecuencia 
+ para la sentencia If
+
+ .this -> la palabra reservada this es un apuntador que apunta a un punto de inicio , es un valor especial que se refiere al contexto
+ en el que esta ejecutando una funcion, el valor this puede cambiar dependiendo de como y donde se usa.
+ 
+En el contexto Global .this apunta -> a window
+
+For each -> Es utilizado para iterar sobre cada elemento de un array ejecutando una funcion callback para cada uno de los elementos
+en cada iteracion se imprime el valor del elemento , es utilizado cuando necesitas realizar operaciones en cada clave de un array,
+como imprimir , modificar o realizar calculos.
+
+.map -> Se utiliza para crear un nuevo array aplicando una funcion a c/u de los elementos de un array existente, se usa cuando 
+necesitas aplicar una transformacion a cada elemento de un array y obtener un nuevo array con los resultados.
+/////////////////////////////////////////////////////////////////////////////////
+
+Que hace el metodo filter
+Se utiliza para crear un nuevo array con todos los elementos que ocupan una condicion especifica en una funcion callback, es una herramienta
+util cuando necesitas obtener una sub-coleccion de elementos de un array basado en un criterio especifico.
+
+Este metodo es ideal cuando necesitas filtrar un array , iterando solo aquellos elementos que cumplen un criterio especifico.
+
+/////////////////////////////////////////////////////////////////////////////////
+
+¿Cual es la diferencia entre usar foreach y map?
+
+.map crea un nuevo array y es utilizado cuando se quiere transformar en un array
+
+for each -> puede modificar el array original , si la funcion callback lo hace explicitamente
+
+¿Como se usa el metodo reduce?
+
+¿Cual es la diferencia entre map y reduce?
+
+¿Como puedo encontrar un unico valor en un array?
+
+
+¿Que es una clase en JS?
+
+Es una funcion que tiene acceso al atributo de su funcion externa 
+
+Explica como funciona un closure
+
+Cuando se crea una funcion dentro de otra la funcion interna tiene acceso no solo a su propias variables y variables globales
+si no tambien las variables de la funcion externa que sea definida externa
+
+/////////////////////////////////////////////////////////////////////////////////
+
+IIFE -> Expresion de Funcion Invacada Inmediatamente 
+
+Es una funcion en JS que se ejecuta Inmediatamente despues de su funcion con que se ocupa para crear un nuevo ambito y 
+evitar contaminar el espacio de nombres global.
+
+Para que se debe de utilizar?
+Evita contaminar el espacio de nombre global
+Puede crear un ambito privado lo que evita que las variables y funciones se filtran al ambito global 
+
+Aislamiento : Puede aislar el codigo de un IIFI para evitar conflictos con otras partes de la aplicacion.
+
+Privacidad de Datos : Las variables dentro de un IIFI NO son accesibles desde el exterior lo que puee ser util para proteger los datos
+
+Contexto de Ejecucion : Los IIFI se utilizan a menudo para crear un contexto de ejecucion para el codigo que necesita ejecutarse inmediatamente.
+
+Menciona algunos IIFE :
+Funciones anonimas auntoinvocadas como Crocfor, Facebook , Unaria
+
+¿Que es la herencia?
+Es una forma de crear una nueva clase apartir de una clase exsitente la nueva clase hereda las propiedades y metodos de la clase existente
+
+Tipos de Estructura de datos
+Map y Set
+Son tipos de datos de referencia por que se comparten como objetos y pueden almacenar colecciones de datos
+
+Que es map en JS?
+
+Que es set en JS?
+
+
+
+
+
+
+
+
+
+
+
+
+
