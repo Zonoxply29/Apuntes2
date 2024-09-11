@@ -121,8 +121,22 @@ Que es map en JS?
 
 Que es set en JS?
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Las clases en JavaScript, introducidas con ECMAScript 6 (ES6), comenzaron a ser compatibles de forma general en todos los navegadores modernos en 2016. Aquí está un desglose de cuándo cada navegador comenzó a soportar las clases:
 
+    Google Chrome: Desde la versión 42 (abril de 2015).
+    Mozilla Firefox: Desde la versión 45 (marzo de 2016).
+    Microsoft Edge: Desde la versión 12 (julio de 2015).
+    Safari: Desde la versión 9 (octubre de 2015).
+    Opera: Desde la versión 29 (abril de 2015).
 
+Las propiedades privadas en JavaScript (#propiedad) se volvieron compatibles en todos los navegadores modernos de la siguiente manera:
+
+    Google Chrome: Desde la versión 74 (abril de 2019).
+    Mozilla Firefox: Desde la versión 90 (julio de 2021).
+    Microsoft Edge: Desde la versión 74 (abril de 2019, al estar basado en Chromium).
+    Safari: Desde la versión 14.1 (abril de 2021).
+    Opera: Desde la versión 62 (junio de 2019, también basado en Chromium).
 
 
 

@@ -144,16 +144,27 @@
     El Codigo Asincrono si va a ser NO BLOQUEANTE.
     
     Vamos a tener dos tipos de codigo Sincrono Bloquante y Asincrono no Bloqueante.
-  
+
+    El set time out es un mecanismo de asincronismo porque va a tardar el tiempo que nosotros le dijimos 
+    
+    Aunque el set Time out tenga 0 en tiempo , como es una funcion pasa a la fila del callstack
+
+    Los console log tienen preferencia al ejecutarse aunque sea una funcion 
+
+    EN RESUMEN -> JS Usa un modelo asincrono y no bloqueante , con un loop de eventos("Event-loop") implementados en un solo hilo
+    (Single-Treat) para operaciones de entrada y salida 
+
 */
 
 
 // El console log que imprime primero se ejecuta inmediatamente y el segundo que es el set time out configura un time out pero en lugar de 
 //ejecutarse inmediatamente se manda a la cola osea la callback queue
 
+// Este ejercicio es una mezcla de codigo sincrono y asincrono y juntos hacen un ejercicio asincrono
 
 console.log("Primero")
 setTimeout(() => {
    console.log("Segundo") 
 }, 0);
 console.log("Tercero")
+
