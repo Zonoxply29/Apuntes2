@@ -1,0 +1,51 @@
+ 
+npm significa (node package manager) 
+Para construir un proyecto con npm necesitas dependencias para "CORRER y CONSTRUIR" el proyecto 
+
+dependencies -> son dependencias necesarias para que el proyecto o aplicacion funcione
+Dev dependecies -> son dependencias que ayudan a crear el proyecto o aplicacion (no son necesarias para que funcione el proyecto)
+
+********* COMANDOS NPM *********
+npm init -y -> crea todo el proyecto sin tener que proporcionar informacion del proyecto
+
+npm init -> inicia el proyecto crea el archivo package json
+
+npm search[Nombre del paquete] -> Buscar paquetes
+
+npm install [Nombre del Paquete] -> Instalar un paquete en especifico con la version estable
+
+npm install Nombre del Paquete@version -> Instala la version en especifico de la tecnologia y la version necesaria
+
+npm install [Nombre del Paquete] --save -> Instalar el paquete y modifica el archivo package.json agregando la libreria en las dependencias
+
+npm install [Nombre del Paquete] --save-dev ->Instala el paquete y modifica el archivo .json agregando la libreria
+en las dependencias solo necesarias para desarollo
+
+npm install -g [Nombre del Paquete] -> Indica a npm que se debe de instalar el paquete de manera global, esto significa que se va a poder 
+utilizar desde cualquier directorio
+
+////////////////////////////////////////////////////////
+
+npm rm [Nombre del Paquete] -> elimina el paquete local
+npm uninstall [Nombre del Paquete] -> elimina el paquete local
+
+//////////////////////////////////////////////////////////
+
+npm rm -g [Nombre del Paquete] -> Elimina el paquete de forma global 
+npm uninstall -g [Nombre del Paquete] -> Elimina el paquete de forma global
+
+////////////////////////////////////////////////////////
+
+npm ls -> listar las dependencias del proyecto
+npm outdated -> Consultar las últimas versiones compatibles con las librerías que se tengan en el proyecto
+npm update -save ->  Actualizar todas las librerías de tu proyecto que sean compatibles
+
+/////////////////////////////////////////////////////
+npm install -> Si no se le especifica un paquete , npm entiende que se quiere verificar o instalar todas las dependencias dentro
+del archivo package.json 
+
+(Suele ser habitual cuando se descargan proyectos o aplicaciones de github ya que las dependencias
+se deben de instalar luego de descargar el proyecto por el tamaño que ocupan)
+
+/////////////////////////////////////////////////////
+
