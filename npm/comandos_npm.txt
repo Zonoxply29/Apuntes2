@@ -6,6 +6,8 @@ dependencies -> son dependencias necesarias para que el proyecto o aplicacion fu
 Dev dependecies -> son dependencias que ayudan a crear el proyecto o aplicacion (no son necesarias para que funcione el proyecto)
 
 ********* COMANDOS NPM *********
+npm install -> lo necesito para descargar la paqueteria node modules para echar andar el proyecto
+
 npm init -y -> crea todo el proyecto sin tener que proporcionar informacion del proyecto
 
 npm init -> inicia el proyecto crea el archivo package json
