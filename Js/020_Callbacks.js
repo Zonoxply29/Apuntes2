@@ -168,7 +168,7 @@ comprar(2,3,imprimir) //Aqui van los valores
 
 
 // callback clasico que esta tomando el nombre y imprime posteriormente un adios
-
+/*
 let saludar =(nombre,callback) =>{
     console.log(`Hola ${nombre}`)
     callback()
@@ -182,23 +182,166 @@ saludar("hugo",despedir)
 
 
 
+let saludar = (mexico) =>{
+    console.log(mexico)
+}
+
+let imprimir = (canada) =>{
+    return canada("hola estoy escribiendo desde la funcion imprimir")
+}
+
+imprimir(saludar)
+
+
+let fun1 = (fun2) =>{ //Aqu van los "parametros"
+    console.log("Inicio")
+    fun2() //Aqui se ejecutan las funciones que pase por valor por parametro
+    console.log("Fin")
+}
+
+let fun2 = () =>{
+    console.log("Proceso intermedio")
+}
+
+fun1(fun2) //Aqu van los valores
+
+
+let perrera = (perro) =>{
+    console.log(`Hola mundo tengo ${perro} pesos`)
+}
+    //Puedo manipular la funcion con el nombre de el "PARAMETRO"
+let otrafuncion = (mexico,numero) =>{
+    mexico(numero)
+}
+
+otrafuncion(perrera,100)
+
+let dinero = (saldo) =>{
+    console.log(`Tu saldo es ${saldo}`)
+}
+
+let imprimirdinero = (callback,dinero)  =>{
+    callback(dinero)
+}
+imprimirdinero(dinero,200) 
+
+////////////////////////////////////////////////////////////////
+
+// callback que imprimia la suma de dos digitos y imprima el resultado es y la suma de los dos digitos
+let comprar =(num1,num2,total) =>{
+    let caja1 = num1+num2;
+    total(caja1);
+}
+
+let imprimir = (resultado) => {
+    console.log(`la suma de los digitos es de ${resultado}`)
+}
+
+comprar(2,5,imprimir)
+
+
+/// se ejecuta dentro de una funcion anonima fisrt action para posteriormente dentro de la funcion se ejecute second action
+function firstAction(callback) {
+    console.log("I'm the first action")
+    setTimeout(callback,5000)
+  }
+  
+  function secondAction() {
+    console.log("I'm the second action")
+    
+  }
+
+  setTimeout(()=>firstAction(secondAction),3000)
+
+
+function primero (callback) {
+    setTimeout(() => {
+        console.log("primero")
+        callback()
+    }, 3000);
+}
+
+function segundo () {
+    console.log("segundo")
+}
+
+primero(segundo)
+
+
+// suma de digitos por callbacks
+
+let suma = (num1,callback) =>{
+    console.log(num1 + callback())
+}
+
+let resta = () =>{
+    return 2-3
+}
+suma(4,resta)
+
+
+// suma de digitos por callbacks codigo feo
+
+let suma = (num1,callback) =>{
+    console.log(num1 + callback)
+}
+
+let resta = () =>{
+    return 2-3
+}
+suma(4,resta()) // se esta resolviendo desde la ejecucion cuando debe de ser desde la funcion
+
+AMBOS FUNCIONAN PERO EL PRIMER CODIGO ES SUCIO Y EL SEGUNDO ES LIMPIO
+
+let inicio = function (valor,callback) {
+    callback(valor);
+  }
+
+inicio("fulanito",function(valor){
+    console.log(`Bienvenido ${valor}`)
+  
+})
+
+
+let inicio =(valor,callback) =>{
+    callback(valor)
+}
+
+let bienvenida =(usuario) =>{
+    console.log(`Bienvenido ${usuario}`)
+}
+
+inicio("Juan",bienvenida)
+
+/// HACIENDO UN EJERCICIO CON CODIGO SUCIO
+
+let suma = (num1,num2,callback) => {
+    resultado = num1 + num2;
+    callback(resultado)
+}
+
+suma(1,2,function (valor){
+    console.log(valor)
+})
 
 
 
+*/
+
+//un callback que tarde 5 segundos en inicializarse e imprima primero y despues de 3 segundos imprima segundo
+//meti una funcion anonima dentro de un valor 
+
+let temporizador =(callback) =>{
+    setTimeout(() => {
+        console.log("primero")
+        callback()
+    }, 5000);
+}
+
+setTimeout(()=>temporizador(()=>console.log("segundo")),3000)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
