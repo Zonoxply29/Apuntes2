@@ -1,0 +1,10 @@
+{
+    "nombre" : "hugo",
+    "edad" : "20",
+    "amigos" : ["tona","gerardo","luis"],
+    "escuelas" : {
+        "primaria" : "COTHAMI",
+        "secundaria" : "COTHAMI",
+        "prepa" : "CEDVA"
+    }   
+}
