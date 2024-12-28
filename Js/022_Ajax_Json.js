@@ -59,7 +59,7 @@ Todas las propiedades JSON llevan " " comillas dobles
 
 EL objeto JSON tiene dos metodos : 
 
-JSON.parse() -> Analiza una notacion JSON osea (texto) y lo convierte a un tipo de dato que JS entienda como 
+////* JSON.parse() -> Analiza una notacion JSON osea (texto) y lo convierte a un tipo de dato que JS entienda como 
 
 console.log("{}")
 console.log(JSON.parse("{}"))
@@ -70,7 +70,7 @@ console.log(JSON.parse("123"))
 let dato = JSON.parse('{"nombre" : "hugo","edad" : "20","amigos" : ["tona","gerardo","luis"],"escuelas" : {"primaria" : "COTHAMI","secundaria" : "COTHAMI","prepa" : "CEDVA"}   }')
 console.log(dato)
 
-JSON.stringify() -> Convierte los tipos de dato a texto lo contrario a .parse()
+////* JSON.stringify() -> Convierte los tipos de dato a texto lo contrario a .parse()
 
 let dato = JSON.stringify({ nombre : "Hugo"})
 
@@ -103,7 +103,19 @@ como del lado del servidor osea debe de usar el protocolo HTTP
 
 //////? QUe significa API -> APLICATION PROGRAM INTERFACE
 
+//////! QUE Significa .open ,.onload , .send
 
+////* .open
+Inicializa una solicitud HTTP.
+Configura el método, la URL y si la solicitud es asíncrona.
+
+////* .onload
+Define una función que se ejecutará cuando la solicitud se complete con éxito.
+Dentro de esta función, puedes procesar la respuesta del servidor
+
+////* .send
+Envía la solicitud HTTP configurada.
+En solicitudes GET, generalmente se llama sin parámetros.
 */
 
 
