@@ -629,8 +629,6 @@ cuadrado(4,(valor,resultado)=>{
         })
     })
 })
-*/
-
 
 //un callback que reciba dos parametros primero debe ser un nombre y el segundo el callback 
 //y debe de imprimir "obteniendo los post de: el nombre y dos segundos despues imprima algun dato que este almacenado en el array"
@@ -644,9 +642,8 @@ let post = (nombre,callback) =>{
 post("hugo",(dato)=>{
     console.log(`Dato Obtenido: ${dato}`)}
 )
+*/
 
-// crear un programa que haga lo mismo que el foreach crear el programa que recorra el array pero que ocupe un callback
 
-let foreach = (inicio,callback) =>{
-                            
-}
+
+
