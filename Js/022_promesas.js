@@ -132,14 +132,11 @@
             console.log("Resultado:",resultado)
         })
 
-*/
-//crear una funcion que devuelva una promesa y la ejecute 
+
+///?crear una funcion que devuelva una promesa y la ejecute 
 
 let devuelvepromesas = () =>{
-    /*let promesa1 = new Promise((resolve, reject) => {
-        resolve("se ejecuta la promesa")
-    })
-    */
+   
     return new Promise((resolve, reject) => {
         setTimeout(() => {
           if(false){
@@ -151,13 +148,6 @@ let devuelvepromesas = () =>{
     })
 }
 
-/*devuelvepromesas(
-    promesa1
-    .then((resultado)=>{
-        console.log(resultado)
-}))
-*/
-
 devuelvepromesas()
     .then((resultado)=>{
         console.log(resultado)
@@ -165,3 +155,111 @@ devuelvepromesas()
     .catch((error)=>{
         console.log(error)
     })
+ */
+
+////? Pasar este callback a promesa
+/*
+const asincroniaConCallBack =(num1,num2,callback) => {
+    const resultado = num1 + num2;
+    return setTimeout( () =>{
+      callback(resultado);
+    },500)
+  }
+  asincroniaConCallBack(1,2,(parametro)=>{
+    console.log(parametro)
+  })
+
+
+    let sumapromesa =(num1,num2)=>{
+    let resultado = num1+num2;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(resultado)  
+        },500);
+     })
+  }
+
+sumapromesa(2,3) //los valores se pasan mediante la ejecucion de la promesa
+    
+.then((parametro)=>{
+        console.log(parametro)
+    })
+
+*/
+/*
+function firstOperation(callback) {
+    setTimeout(() => {
+      console.log("Primera operación completada");
+      callback();
+    }, 1000);
+  }
+  
+  function secondOperation(callback) {
+    setTimeout(() => {
+      console.log("Segunda operación completada");
+      callback();
+    }, 1000);
+  }
+  
+  function thirdOperation(callback) {
+    setTimeout(() => {
+      console.log("Tercera operación completada");
+      callback();
+    }, 1000);
+  }
+  
+  // Uso de callbacks anidados (callback hell)
+  firstOperation(() => {
+    secondOperation(() => {
+      thirdOperation(() => {
+        console.log("Todas las operaciones completadas");
+      });
+    });
+  });
+*/
+//? Pasando un Callback Hell a Promesa
+  let primeraoperacion = ()=>{
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+           resolve()
+           console.log("Primera Operacion Completada") 
+        },1000);
+    })
+  }
+  let segundaoperacion = ()=>{
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+           resolve()
+           console.log("Segunda Operacion Completada") 
+        },2000);
+    })
+  }
+  let terceraoperacion = ()=>{
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+           resolve() 
+           console.log("Tercera Operacion Completada")
+        },3000);
+    })
+  }
+
+
+primeraoperacion()
+    .then(()=>segundaoperacion())
+    .then(()=>terceraoperacion())
+    .then(()=>console.log("Todas Las Operaciones Completadas"))
+
+    /*
+Esto no se debe de hacer para ejecutar
+
+segundaoperacion()
+.then((op2)=>{
+    console.log(op2)
+})
+
+terceraoperacion()
+.then((op3)=>{
+    console.log(op3)
+    console.log("Todas las Operaciones Completadas")
+})*/
+
