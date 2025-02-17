@@ -133,7 +133,7 @@
         })
 
 
-///?crear una funcion que devuelva una promesa y la ejecute 
+////?crear una funcion que devuelva una promesa y la ejecute 
 
 let devuelvepromesas = () =>{
    
@@ -187,37 +187,38 @@ sumapromesa(2,3) //los valores se pasan mediante la ejecucion de la promesa
 
 */
 /*
-function firstOperation(callback) {
-    setTimeout(() => {
-      console.log("Primera operación completada");
-      callback();
-    }, 1000);
-  }
+////? Pasando un Callback Hell a Promesa
+    function firstOperation(callback) {
+        setTimeout(() => {
+          console.log("Primera operación completada");
+          callback();
+        }, 1000);
+      }
+      
+      function secondOperation(callback) {
+        setTimeout(() => {
+          console.log("Segunda operación completada");
+          callback();
+        }, 1000);
+      }
+      
+      function thirdOperation(callback) {
+        setTimeout(() => {
+          console.log("Tercera operación completada");
+          callback();
+        }, 1000);
+      }
   
-  function secondOperation(callback) {
-    setTimeout(() => {
-      console.log("Segunda operación completada");
-      callback();
-    }, 1000);
-  }
-  
-  function thirdOperation(callback) {
-    setTimeout(() => {
-      console.log("Tercera operación completada");
-      callback();
-    }, 1000);
-  }
-  
-  // Uso de callbacks anidados (callback hell)
-  firstOperation(() => {
-    secondOperation(() => {
-      thirdOperation(() => {
-        console.log("Todas las operaciones completadas");
+      /// Uso de callbacks anidados (callback hell)
+      firstOperation(() => {
+        secondOperation(() => {
+          thirdOperation(() => {
+            console.log("Todas las operaciones completadas");
+          });
+        });
       });
-    });
-  });
-*/
-//? Pasando un Callback Hell a Promesa
+
+////? Pasando un Callback Hell a Promesa
   let primeraoperacion = ()=>{
     return new Promise((resolve)=>{
         setTimeout(() => {
@@ -249,17 +250,19 @@ primeraoperacion()
     .then(()=>terceraoperacion())
     .then(()=>console.log("Todas Las Operaciones Completadas"))
 
-    /*
-Esto no se debe de hacer para ejecutar
+////!Esto NO se debe de hacer para ejecutar
 
-segundaoperacion()
-.then((op2)=>{
-    console.log(op2)
-})
+    segundaoperacion()
+    .then((op2)=>{
+        console.log(op2)
+    })
 
-terceraoperacion()
-.then((op3)=>{
-    console.log(op3)
-    console.log("Todas las Operaciones Completadas")
-})*/
+    terceraoperacion()
+    .then((op3)=>{
+        console.log(op3)
+        console.log("Todas las Operaciones Completadas")
+    })
+
+*/
+
 
