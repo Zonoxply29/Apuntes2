@@ -263,6 +263,199 @@ primeraoperacion()
         console.log("Todas las Operaciones Completadas")
     })
 
+///? Se puede omitir el uso de catch de la siguiente manera ocupando solo .then y una coma y una funcion anonima en el caso de resolve daria como resultado
+///* el primer parametro y en el de reject el segundo parametro 
+        let getweather = () =>{
+      return new Promise((resolve, reject) => {
+        reject("Nublado")
+      })
+    }
+
+    const promesa = getweather()
+
+    promesa
+    .then((data)=>{
+      console.log(`Primer Parametro ${data}`)
+    },
+        (data)=>{
+          console.log(`Segundo Parametro ${data}`)
+        })
+
+  ///Estilisando la funcion restructurada
+      let getweather = () =>{
+        return new Promise((resolve, reject) => {
+          reject("Nublado")
+        })
+      }
+
+      let exito = (dato) =>{
+        console.log(`Primer Parametro ${dato}`)
+      }
+
+      let fallo = (dato) =>{
+        console.log(`Segundo Parametro ${dato}`)
+      }
+
+      getweather().then(exito,fallo)
+
+      ///Promesas utilizando switch 
+///* Crear 4 funciones , La primer funcion debe de retornar una promesa con un set time out de un segundo de retraso la cual recibira el clima
+///* (lluvioso,soleado,etc), la segunda funcion tendra un parametro retornara una promesa con un retraso de 1 segundo , y usaras switch para las opciones
+///* cada caso devolvera un icono (https://emojipedia.org/) , la funcion 3 y 4 la 3 imprimira si fue exitoso y la 4 que fallo 
+//*ejecutaras unicamente .then 2 veces si encuentra el clima debe de imprimir exito y mostrar el icono del clima si falla imprimira no se encontro
+///*el icono
+
+////! Se puede mandar un error desde un reject sin ocupar como tal un catch y ademas ejecutarlo con un.then y manejarlo como error 
+    function clima  (){
+      return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          resolve("soleado")
+        }, 1000);
+      })
+    }
+
+    function opcionesclima (clima){
+      return new Promise(function(resolve, reject) {
+        setTimeout(() => {
+          switch (clima) {
+
+              case "soleado":
+                resolve("🌞")
+                break;
+          
+              case "nublado":
+                resolve("☁️")
+                break;
+
+              case "lluvioso":
+                resolve("🌧️")
+                break;
+
+              default:
+                reject("No se encontro el icono")
+          }
+        }, 1000);
+      })
+  }
+
+  function exito (estado){
+    console.log(`exito ${estado}`)
+  }
+  function fallo (estado){
+    console.log(`No se encontro el clima ${estado}`)
+  }
+
+  clima()
+    .then(opcionesclima)  
+    .then(exito,fallo)
+
+
+    // Demostrando como no es bueno utilizar .then para manejar errores 
+let fun1 = () =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('404')
+    }, 1000);
+  })
+}
+
+let fun2 = () =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Resuelto")
+    },1000);
+  })
+}
+
+let onSuccess = (data) =>{
+  console.log(`Success: ${data}`)
+}
+
+let onError = (data) =>{
+  console.log(`Error: ${data}`)
+}
+fun1()
+  .then(fun2)
+  .then(onSuccess)
+  //.then(onSuccess,onError) // NO se debe de hacer esto
+  //.then(onError) // No se debe de manejar el error con .then
+
+  .catch(onError) // La manera correcta es con .catch para eso existe
+
+/// Asincronia con Callback
+
+const asincroniaConCallBack =(num1,num2,callback) => {
+  const resultado = num1 + num2;
+  return setTimeout( () =>{
+    callback(resultado);
+  },500)
+}
+asincroniaConCallBack(1,2,(parametro)=>{
+  console.log(parametro)
+})
+/// Pasando a Promesa el Callback 
+let suma = (num1,num2) =>{
+  return new Promise((resolve, reject) => {
+      let resultado = num1+ num2;
+      setTimeout(() => {
+        resolve(resultado)
+      },500);
+  })
+}
+suma(2,3)
+  .then(parametro => console.log(`Tu resultado es ${parametro}`))
+*/
+/*
+(()=>{
+  function getUsers (){
+    setTimeout(() => {
+      console.log("Users are ready")
+    },3000);
+  }
+  function getProjects(){
+    setTimeout(() => {
+      console.log("Project are ready")  
+    }, 1000);
+  }
+  function getIssues(){
+    setTimeout(() => {
+       console.log("Issues are ready") 
+    }, 2000);
+  }
+
+  getUsers()
+  getProjects()
+  getIssues()
+})
+()
 */
 
+let getUsers = ()=>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Users are ready")  
+      resolve()
+    }, 3000);
+  })
+}
+let getProjects = ()=>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Project are ready")
+      resolve()
+    }, 1000);
+  })
+}
 
+let getIssues = ()=>{
+ return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Issues are ready")
+      resolve()
+    }, 2000);
+  })
+}
+
+getUsers()
+  .then(getProjects)
+  .then(getIssues)
