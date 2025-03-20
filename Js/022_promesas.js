@@ -428,8 +428,8 @@ suma(2,3)
   getIssues()
 })
 ()
-*/
 
+/// CALLBACK A PROMESA
 let getUsers = ()=>{
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -459,3 +459,65 @@ let getIssues = ()=>{
 getUsers()
   .then(getProjects)
   .then(getIssues)
+
+////! EJERCICIO 13 - CUADRADO DE UN NUMERO QUE SE ASIGNE
+
+let cuadradopromise = (value) =>{
+  if(typeof value !== "number"){
+    return Promise.reject(`Error , el valor "${value}" ingresado no es un numero`) // verifica que se cumpla que sea un numero
+  }
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        value,
+        result: value * value,
+      })  
+    }, 3000);
+  })
+}
+
+cuadradopromise(0)
+.then((miobjeto)=>{
+  console.log("Inicio Promise");
+  console.log(`Promise: Valor:${miobjeto.value}, valor al cuadrado:${miobjeto.result}`)
+  return cuadradopromise(4)
+})
+.then((miobjeto)=>{
+  console.log("Inicio Promise");
+  console.log(`Promise: Valor:${miobjeto.value}, valor al cuadrado:${miobjeto.result}`)
+  return cuadradopromise(5)
+})
+.then((miobjeto)=>{
+  console.log("Inicio Promise");
+  console.log(`Promise: Valor:${miobjeto.value}, valor al cuadrado:${miobjeto.result}`)
+  return cuadradopromise(6)
+})
+.then((miobjeto)=>{
+  console.log("Inicio Promise");
+  console.log(`Promise: Valor:${miobjeto.value}, valor al cuadrado:${miobjeto.result}`)
+  return cuadradopromise(7)
+})
+.catch("Error")
+
+////! Crea dos funciones que retornen promesas c/u con un retraso de 2 segundos una promesa debe de ejecutar a la otra 
+////! Y una de esas funciones debe de devolver un texto que diga hola mundo
+*/
+  let mipromesa = new Promise((resolve, reject) => {
+    console.log("Estas haciendo algo")
+    setTimeout(() => {
+      resolve(mipromesa2())
+    }, 2000);
+  }) 
+
+  let mipromesa2 = () =>{
+    return new Promise((resolve, reject) => {
+      console.log("Estoy haciendo algo mas")
+      setTimeout(() => {
+        resolve("Se ha terminado todo")
+      }, 2000);
+    })
+  }
+mipromesa()
+  .then( resultado => console.log(resultado))
+  .catch( message => console.log(message))
+  

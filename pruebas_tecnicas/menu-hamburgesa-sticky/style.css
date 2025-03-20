@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+    display:inline-block;
+}
+
+.estilos-header{
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.navbar ul{
+    display:flex;
+    align-items: center;
+}
+.elemento-izquierdo{
+    font-size: 30px;
+    margin-left: 20vh;
+}
+.elemento-derecho{
+    font-size: 20px;
+    margin-left: auto;
+    padding-right: 40vh;
+}
+
+.contenido{
+    background: linear-gradient(to bottom, #D3D3D3, #000000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+.contenido h1{
+    font-size: 5vh;
+    color: white;
+}
+.contexto{
+    font-size: 3vh;
+    color: white;
+}
+.btn{
+    background-color:#F8C747;
+    color: black;
+    border-radius: 20px;
+    padding: 12px 12px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.menu-hamburgesa{
+    font-size: 40px;
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+@media(max-width: 500px){
+    .navbar ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar ul.active{
+        display: flex;
+    }
+    .menu-hamburgesa{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .elemento-derecho{
+        display: none;
+    }
+    .elemento-derecho.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        gap: 15px;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        padding-right: 0px;
+        padding-top: 11px;
+    }
+    
+    .elemento-izquierdo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 7px 20px;
+    }
+    .navbar a{
+        padding: 0px;
+        margin-right: auto;
+    }
+}
