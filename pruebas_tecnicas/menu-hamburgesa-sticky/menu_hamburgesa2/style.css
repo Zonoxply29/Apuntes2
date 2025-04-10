@@ -19,6 +19,11 @@ li{
     text-decoration: none;
     color: white;
     padding: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar a:hover{
+    transform: scale(1.2); /* Escala el texto al 120% */
 }
 .navbar ul{
     display: flex;
@@ -83,10 +88,10 @@ li{
     .navbar a{
         padding: 0px;
         margin-right: auto;
+        transition: transform 0.3s ease-in-out;
     }
     .navbar a:hover{
-        font-size:70px;
-        color: blue;
+        transform: scale(1.2);
     }
     .navbar ul.active{
         display: flex;
@@ -111,6 +116,7 @@ li{
         width: 100%;
         padding-right: 0;
         padding-top: 11px;
+        padding-bottom: 20px;
     }
     .elemento-izquierdo{
         display: flex;
