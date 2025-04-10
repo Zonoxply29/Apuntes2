@@ -499,10 +499,10 @@ cuadradopromise(0)
 })
 .catch("Error")
 
-////! Crea dos funciones que retornen promesas c/u con un retraso de 2 segundos una promesa debe de ejecutar a la otra 
+////! EJERCICIO 14! Crea dos funciones que retornen promesas c/u con un retraso de 2 segundos una promesa debe de ejecutar a la otra 
 ////! Y una de esas funciones debe de devolver un texto que diga hola mundo
-*/
-  let mipromesa = new Promise((resolve, reject) => {
+
+let mipromesa = new Promise((resolve, reject) => {
     console.log("Estas haciendo algo")
     setTimeout(() => {
       resolve(mipromesa2())
@@ -520,4 +520,197 @@ cuadradopromise(0)
 mipromesa()
   .then( resultado => console.log(resultado))
   .catch( message => console.log(message))
+
+////! EJERCICIO 15 //Crea dos funciones que retornen promesas la primera funcion al ejecutarse debe de retornar un objeto con dos parametros con texto
+////! c/U. Al ejecutarse ese objeto que retorno, debe de usarse como valor en la ejecucion de la segunda funcion, y esa segunda funcion
+////! debe de escribir texto y concatenar algun parametro de el objeto de la primera funcion 
+
+// MI CODIGO
+let promesa1 = () =>{
+  return new Promise((resolve, reject) => {
+    resolve(
+      persona = {
+        nombre:"Hugo",
+        edad:"20"
+      }
+    )
+  })
+}
+let promesa2 = (parametro) =>{
+  return new Promise((resolve, reject) => {
+    resolve(console.log(`hola mi nombre es ${parametro}`))
+  })
+}
+
+promesa1()
+.then((parametro)=>{
+  promesa2(parametro.nombre)
+})
+
+
+///OTRA ALTERNATIVA
+let mostrarphone = (mensaje) =>{
+  return new Promise((resolve, reject) => {
+    if(mensaje){
+      resolve("Obtuviste un " + mensaje.brand)
+    }else{
+      reject("error")
+    }
+  })
+}
+
+let mipromesa = () =>{
+  return new Promise((resolve, reject) => {
+    let tarea = true
+    if(tarea === true){
+      let phone = {
+        color: "negro",
+        brand: "iphone"
+      }
+      resolve(phone)
+    }else{
+      reject("No obtuviste un iphone")
+    }
+  })
+}
+mipromesa()
+.then((mensaje)=>{
+  return mostrarphone(mensaje)
+})
+.then((respuesta)=>{
+  console.log(respuesta)
+})
+.catch((error)=>{
+  console.log(error)
+})
+
+///! EJERCICIO 16 -> Crea una promesa que despues de 2 segundos cuente una palabra que tu le hayas ingresado y te diga si tiene mas de 20
+///! caracteres o no 
+
+///* MI CODIGO
+let promesa = (palabra) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (palabra.length >= 20) {
+        resolve(`la palabra ${palabra} tiene mas de 20 caracteres`)
+      } else {
+        reject(`la palabra ${palabra} faltan caracteres`)
+      }
+    },2000);
+  })
+}
+promesa("hola")
+.then((parametro)=>{
+  console.log(parametro)
+})
+
+/// ALTERNATIVA
+ let contar = (palabra) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let nletras = String(palabra).length
+      if(nletras <20 ){
+        resolve("okay")
+      }else{
+        reject("error")
+      }
+    }, 2000);
+  })
+ }
+///!ejemplo de como guardan en una variable la ejecucion del .then  
+let respuesta = contar("hola buenos dias como estan")
+respuesta.then((parametro)=>{
+  console.log(parametro)
+})
+
+///! EJERCICIO 17 -> Ahora del ejercicio anterior la promesa debe procesar un objeto y convertirlo en JSON, y cuando se ejecute la promesa
+///! debes hacer que el objeto JSON se convierta de nuevo a un objeto 
+let promesa = (objeto) =>{
+  return new Promise((resolve, reject) => {
+    resolve(JSON.stringify(objeto))
+  })
+}
+promesa(
+  persona = {
+    nombre: "Juan",
+    edad: "22"
+  }
+)
+.then((parametro)=>{
+  console.log(JSON.parse(parametro))
+})
+
+///! EJERCICIO 18 -> Pasando un numero desde una ejecucion de una linea de una promesa y usando encadenamiento
+const p1 = Promise.resolve(1)
+/// la promesa ya esta "fullfield" console.log(p1)
+.then(x => x + 5)
+.then(x => console.log(x))
+///encadenamiento de promesas el dato se pueda pasar de una ejecucion a otra
+
+///! EJERCICIO 19 -> Crea una promesa que reciba un numero y que cuando se ejecute la promesa se le sume otro numero
+///! Despues de sumar el numero se va a ejecutar otra vez y en la segunda ejecucion se le va a sumar otro numero y el resultado mostrarlo en consola
+
+let p1 = Promise.resolve(2)
+.then(
+  x => x + 2
+)
+.then(
+  x => x + 5
+)
+.then(
+  x => console.log(x)
+)
+
+///! EJERCICIO 20 -> Esto es un ejemplo de como no se ejecuta nada despues de el catch y que puedes ejecutar una promesa con un catch dentro de un then
+///! esto es sumamente util cuando manejas efectos, como llamar a una API o escribir en Base de Datos de manera que podeos optimizar todo lo que queremos que haga 
+///! nuestra aplicacion
+
+const p1 = Promise.resolve(5)
+console.log(p1)
+p1.then( x => x + 2)
+  .then(x => Promise.resolve(x+5))
+  .then(x => Promise.reject("Error algo sucedio"))
+  .then(x => console.log("Esto no se va a ejecutar"))
+  .catch( e => console.log(e))
+
+///! EJERCICIO 21 -> Crea una funcion que retorne una promesa y que tenga un retraso de 2 segundos ejecuta esa promesa dandole un valor al que se le sumara 7
+///! primero deben de pasar 2 segundos y se ejecutara el primer valor pasaran otros 2 segundos y se sumara el valor mas 7
+let promesa1 = (valor) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(valor)
+    }, 2000);
+  })
+}
+promesa1(5)
+/// CODIGO CON ERROR 
+.then(x => console.log(x))
+.then(promesa1())
+.then(x=> x+7)
+.then(x=> console.log(x))
+
+/// EJECUCION CORRECTA
+.then(x=>{
+  console.log(x)
+  return promesa1(x+7)
+})
+.then(x => console.log(x))    
+
+
+///! EJERCICIO 22 -> Crear una funcion que genere una promesa que de como resultado un numero, cuando se ejecute por primera vez la promesa
+///! multiplicar el numero * 2 y que se muestre el resultado en la consola 
+
+let promesa1 = (numero) =>{
+  return new Promise((resolve, reject) => {
+    resolve(numero)
+  })
+}
+promesa1(2)
+  .then( x => {
+    console.log(x)
+    return promesa1(x*2)
+  })
+  .then(x => console.log(x))
   
+*/
+
