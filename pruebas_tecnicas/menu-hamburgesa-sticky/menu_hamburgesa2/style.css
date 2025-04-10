@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+.estilos-header{
+    display: flex;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar a:hover{
+    transform: scale(1.2); /* Escala el texto al 120% */
+}
+.navbar ul{
+    display: flex;
+    margin-left: 20vh;
+}
+.elemento-izquierdo{
+    font-size: 20px;
+    margin-left: 20vh;
+}
+.elemento-derecho{
+    font-size: 20px;
+    margin-left: auto;
+    padding-left: 70vh;
+}
+.contenido{
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+.contenido h1{
+    font-size: 5vh;
+    color: white;
+}
+.contexto{
+    font-size: 4vh;
+    color: white;
+}
+.btn{
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+}
+.menu-hamburgesa{
+    font-size: 40px;
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+@media(max-width:450px){
+    .navbar ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .navbar a{
+        padding: 0px;
+        margin-right: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+    .navbar a:hover{
+        transform: scale(1.2);
+    }
+    .navbar ul.active{
+        display: flex;
+    }
+    .menu-hamburgesa{
+        display: flex;
+        margin-left: 20vh;
+        margin-right: auto;
+    }
+    .elemento-derecho{
+        display: none;
+    }
+    .elemento-derecho.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        gap: 20px;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        padding-right: 0;
+        padding-top: 11px;
+        padding-bottom: 20px;
+    }
+    .elemento-izquierdo{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 7px 20px;
+    }
+}
