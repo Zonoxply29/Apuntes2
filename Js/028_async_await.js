@@ -14,6 +14,14 @@ Las "promesas asincronas" no vienen a sustituir a las promesas, trabajan en conj
 
  Para el manejo de errores lo que nos conviene es trabajar un bloque "try catch" 
 
+ Async: Crea una funcion que retorna una promesa
+ Await: Crea una funcion "asincrona" que espera una promesa
+
+ /// !Permite que tu escribas codigo "asincrono" de una "manera sincrona"
+
+ Todo lo que sigue a await se coloca en una cola de eventos
+
+ Para el manejo de Errores lo que nos conviene es trabajar con un trycatch
 */
 /*
 function getTheAnswer () {
@@ -77,8 +85,21 @@ async function getArticleById(id) {
 }
 getArticleById(5)
 
+async function getArticleById(id) {
+       try {
+        let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            ///.then(response => response.json())
+            .then(response => console.log(response))
+            console.log(response)
+       } catch (error) {
+         console.log(error)
+       } 
+}
+
+getArticleById(100)
+
 */
-/*
+///! Restructurar el codigo a asyncawait ejecutarlo con asyncawait
 
 let cuadradopromise = (value) =>{
     if(typeof value !== "number"){
@@ -93,18 +114,35 @@ let cuadradopromise = (value) =>{
       }, 3000);
     })
   }
-
-*/
-async function getArticleById(id) {
-       try {
-        let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-            .then(response => response.json())
-            //.then(response => console.log(response))
-            console.log(response)
-       } catch (error) {
-         console.log(error)
-       } 
+/*
+async function ejecutar(valor) {
+    resultado = await cuadradopromise(valor)
+    console.log(resultado)
 }
 
-getArticleById(200)
+ejecutar(4)
+ejecutar(5)
+ejecutar(6)
+ejecutar(7)
+*/
 
+async function ejecutar() {
+  try {
+    console.log("Iniciando")
+
+    let resultado = await cuadradopromise(2)
+    console.log(`Funcion asincrona: ${resultado.value}, ${resultado.result}`)
+    
+    resultado = await cuadradopromise(3) 
+    console.log(`Funcion asincrona: ${resultado.value}, ${resultado.result}`)
+    
+    resultado = await cuadradopromise(4) // se esta sobrescribiendo el resultado 
+    console.log(`Funcion asincrona: ${resultado.value}, ${resultado.result}`)
+    console.log("Fin de la Funcion Asincrona")
+
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+ejecutar()
