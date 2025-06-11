@@ -1,0 +1,29 @@
+.navbar-nav{
+    flex-direction: row !important;
+    gap: 20px;
+}
+.navbar > .container-fluid{
+    justify-content: center !important;
+}
+.logo{
+    display: flex;
+    margin-right: 14vh;
+}
+.opciones{
+    display: flex;
+    align-items: center;
+    margin-left: 10vh;
+    font-weight: 500;
+}
+.iconos{
+    margin-left: 7vh;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.texto-encimado{
+    margin-top: 10vh;
+    margin-left: 20vh !important;
+}
+.texto-encimado p{
+    font-size: 30px;
+}

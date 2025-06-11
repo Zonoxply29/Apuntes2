@@ -1,0 +1,124 @@
+/*ESTILOS NAVBAR*/
+.navbar-logo {
+  margin-right: 60px;
+}
+.phone-number {
+  margin-top: 3px; 
+}
+.custom-navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-logo{
+    margin-left: 20vh;
+}
+.nav-link{
+    font-weight: 700 !important;
+}
+
+/*ESTILOS HEADER*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.hero-header{
+    height: 60vh;
+    overflow: hidden;
+}
+.hero-image{
+    height: 100%;
+    object-fit: cover;
+    margin-top: -95px;
+}
+.texto-encimado{
+    margin-top: 7vh;
+    margin-left: 30vh !important;
+    z-index: 1;
+}
+.texto-encimado p{
+    font-size: 1.2rem; 
+}
+.contenido-header{
+    max-width: 100vh;
+}
+.btn-primary{
+    font-size: 1.1rem;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*  ESTILOS CATEGORIAS */
+.categoria-imagen{
+    max-width: 100%;
+    height: auto;
+    filter: brightness(80%);
+}
+.categoria-contenedor{
+    max-width: 58%;
+    margin-left: 45vh;
+}
+.categoria-texto{
+    text-align: center;
+    z-index: 2;
+}
+/*ESTILOS BIENVENIDOS*/
+.contenedor-principal{
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.bienvenidos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-img{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.img-principal{
+    width: 100%;
+    height: 60vh;
+    border-radius: 5px;
+}
+.contenedor-lotes{
+    position: relative;
+}
+.texto-lotes{
+    position: absolute;
+    top: -75px;
+    left: 40px;
+    font-size: 0.9rem;
+    color: white;
+}
+.rectangulo-azul{
+    position: absolute;
+    top: 40vh;
+    left: -80px;
+    background: blue;
+    color: white;
+    padding: 7px 8px;
+    font-size: 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-left: 120px;
+}
+.lotes-vendidos{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 20px;
+    font-size: 3rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.btn-geo{
+    margin-top: 20px;
+    border-radius: 20px !important;
+    padding: 10px !important;
+}
