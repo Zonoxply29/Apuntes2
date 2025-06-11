@@ -1,0 +1,8 @@
+yarn init -> inciar un proyecto
+yarn init y -> iniciar y dar a todo que si 
+yarn add "nombre de el framework" -> agregar un framework
+yarn add " " --save --dev -> agregar las dev dependencies
+yarn remove "" -> remover un framework
+yarn add -D "" -> agregar el framework y sus dev dependencies
+Yarn add ""@version -> agregar una version en especifico de un framework
+
