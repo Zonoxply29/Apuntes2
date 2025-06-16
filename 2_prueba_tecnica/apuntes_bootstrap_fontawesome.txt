@@ -1,0 +1,48 @@
+✏️ Apuntes sobre los archivos y curiosidades de bootstrap, font awesome ✏️
+
+    🗺️ Los archivos .map en css 
+    🔍 Son archivos observadores o mejor dicho "archivos que mapean el codigo comprimido/modificado a su version original,
+    para facilitar la depuracion (debugging)
+
+⚙️ SE UTILIZAN CUANDO SE OCUPA UN PREPROCESADOR ya que el preprocesador SASS lo genera
+
+📌 un ejemplo:
+    Un archivo como bootstrap.min.css -----------> está comprimido y difícil de leer.
+    bootstrap.min.css.map ---------->sirve para que herramientas de desarrollo como las de Chrome o Firefox puedan mostrarte 
+    el código original en lugar del minificado cuando inspeccionas el sitio.
+
+    🎨 bootstrap-utilites.css ----> estos archivos estan guardados para cosas visuales, son estilos para componentes de bootstrap que no nececesitan 
+    de JS 
+    ✅ Incluye:
+    Clases de espaciado (.m-3, .p-2)
+    Colores, tipografías, display, bordes, etc.
+    
+    ❌ No incluye 
+    componentes visuales como botones, alertas, o navbars.
+
+    ✅ Lo recomendado es siempre ocupar boostrap.min.css o bootstrap.min.JS
+
+    📦bootstrap.bundle.min.js
+    ✅ Archivo JavaScript que incluye Bootstrap + Popper.js
+    🎯 Popper.js, que se necesita para componentes como:
+        dropdowns
+        tooltips
+        popovers
+
+    💡 Evita tener que incluir Popper por separado.
+   
+    🚀 Muy recomendado para producción, porque:
+        Es más liviano
+        Reduce errores de dependencias
+        Listo para usar sin configuraciones extra
+
+      /// 🎨  FONT AWESOME 
+    ✅ Incluir all.min.css para cargar todos los estilos
+    ✅ Incluir la carpeta webfonts/ en la raíz del proyecto
+    ✅ Usar clases como <i class="fas fa-user"></i> para insertar íconos
+
+    📁 webfonts/ contiene los íconos en formato de fuente (.woff2, .ttf, .svg)
+    🔗 El CSS apunta a esos archivos; si faltan, los íconos no se mostrarán
+
+    📌 En proyectos avanzados, también puedes usar SVG + JS para más control
+    ⚠️ En producción, descargar los archivos y enlazarlos localmente es lo recomendado  
