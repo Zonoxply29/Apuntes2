@@ -73,6 +73,111 @@ Un nodo de texto es un texto que viene dentro de una etiqueta <H1> o etiqueta <p
 Muestra el numero de nodos que existen en el documento HTML
 console.log(document.getElementsByTagName("li"))
 
-*/
+Muestra el numero de clases que existen en el documento HTML
+console.log(document.getElementsByClassName("fa-brands"))
 
-console.log(document.getElementsByTagName("li"))
+Selecciona el contenido del atributo name que se encuentra en el HTML
+console.log(document.getElementsByName("nombre"))
+
+Selecciona elementos con el atributo menu
+console.log(document.getElementById("menu"))
+
+Selecciona elementos con el id que se encuentra en el HTML
+console.log(document.getElementById("menu"))
+
+Selecciona lo que sea pero se debe de poner reconce clases, ids y etiquetas
+console.log(document.querySelector("nombre"))
+
+Selecciona varios elementos que contengan la clase id o etiqueta HTML
+console.log(document.querySelectorAll(".fa-brands"))
+
+Se puede recorrer con forEach otros tipos de dato aunque no sea un array en este caso una coleccion de nodos con
+la etiqueta a y lo imprimimos para saber su contenido es util si quieres saber que datos se estan guardando en tus elementos o clases
+
+document.querySelectorAll("a").forEach(Element => console.log(Element))
+
+/// Seleccionar un elemento en especifico cuando tienes la misma clase repetida
+console.log(document.querySelectorAll(".fa-brands")[2])
+
+/// Seleccionar un elemento dentro de un id que en este caso es del div con id feed
+console.log(document.querySelector("#feed li"))
+
+
+// el tipo de dato que arroja un tipo de nodo de HTMLCollection que a su vez es un tipo de objeto
+const caja = document.getElementsByClassName("logo")
+console.log(caja)
+
+///* El estandar es6 te permite crear tus propios atributos se le conoce como los data-atributes, puedes escribirlo asi:
+//!data-NombreDeMiAtributo
+///* despues del guion medio le puedes poner el nombre que tu quieras.
+///*tambien puedes interactuar con los data atributes y ponerle valores
+
+/// te da el atributo de idioma de el sitio 
+console.log(document.documentElement.lang)
+
+/// obtiene de la misma manera el atributo 
+console.log(document.documentElement.getAttribute("lang"))
+
+console.log(document.querySelector(".inicio").href) // da el link de el archivo href
+console.log(document.querySelector(".inicio").getAttribute("href")) // da solo el valor de href
+
+//* se cambio el valor del atributo lang
+
+document.documentElement.lang = "es"
+console.log(document.documentElement.lang)
+
+//* otra forma de modificar una atributo
+
+document.documentElement.setAttribute("lang","es-mx")
+console.log(document.documentElement.lang)
+
+//* otra forma de modificar una atributo
+
+document.documentElement.setAttribute("lang","es-mx")
+console.log(document.documentElement.lang)
+
+//* el colocar el signo de $ indica que se va a manipular una clase del doom y en este caso se manipula para que abra una ventana nueva en la etiqueta "a"
+
+const $claseInicio = document.querySelector(".inicio")
+    $claseInicio.setAttribute("target","_blank") // hace que al dar clic sobre el logo abra otra ventana 
+
+//* Agregando el atributo noopener desde el dom
+const $claseInicio = document.querySelector(".inicio")
+    $claseInicio.setAttribute("target","_blank")
+    $claseInicio.setAttribute("rel","noopener") // es de seguridad y evita que se acceda a el atributo window.opener
+
+//* Eliminando un atributo de el HTML    
+const $claseInicio = document.querySelector(".inicio") 
+$claseInicio.removeAttribute("href") // elimina un atributo que le indiques
+console.log($claseInicio.hasAttribute("target"))// regresa un valor booleano de el atributo que buscas 
+
+//* data set
+const $claseInicio = document.querySelector(".inicio") 
+console.log($claseInicio.dataset) //guarda los atributos en un objeto de tipo mapa
+
+//* muestra el contenido del atributo con data-perro
+const $claseInicio = document.querySelector(".inicio") 
+console.log($claseInicio.dataset.perro)
+
+//* .SetAtrbute se ocupa para cambiar el elementos de el HTML
+const $claseInicio = document.querySelector(".inicio") 
+$claseInicio.setAttribute("data-description","Hello World!")
+
+//* Esta es otra forma de cambiar un atributo de el HTML
+const $claseInicio = document.querySelector(".inicio") 
+$claseInicio.dataset.description = "Sayonara!"
+
+
+*/
+//* Esta es otra forma de cambiar un atributo de el HTML
+const $apuntes = document.querySelector(".apuntes")
+
+console.log($apuntes.style)
+console.log($apuntes.getAttribute("style"))
+console.log($apuntes.style.backgroundColor) //obteniendo la propiedad css
+console.log(window.getComputedStyle($apuntes))
+console.log(getComputedStyle($apuntes))
+
+console.log((getComputedStyle($apuntes).getPropertyValue("background-color"))) // obtener un valor especifico del css
+
+$apuntes.style.setProperty("text-decoration","none")
