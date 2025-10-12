@@ -1,11 +1,11 @@
-let elemento;
+/**
+ * let elemento;
 
 elemento = document;
 elemento = document.all;
 elemento = document.head;
 console.log(elemento)
-
-/** 
+ 
  * DOM  
  Las etiquetas en el DOM se refieren como elementos podemos seleccionar elementos eliminarlos y modificarlos el DOM es todo mi codigo HTML
  tambien puede seleccionar atributos, clases, ids 
@@ -168,7 +168,7 @@ const $claseInicio = document.querySelector(".inicio")
 $claseInicio.dataset.description = "Sayonara!"
 
 
-*/
+
 //* Esta es otra forma de cambiar un atributo de el HTML
 const $apuntes = document.querySelector(".apuntes")
 
@@ -181,3 +181,158 @@ console.log(getComputedStyle($apuntes))
 console.log((getComputedStyle($apuntes).getPropertyValue("background-color"))) // obtener un valor especifico del css
 
 $apuntes.style.setProperty("text-decoration","none")
+
+/// MODIFICANDO ATRIBUTOS STYLE DESDE JS
+const $google = document.querySelector(".google")
+//$google.style.setProperty("text-decoration","none")
+
+$google.style.setProperty("display","block")
+
+$google.style.width = "50%";
+
+
+/// ESTILOS DESDE DOM
+const $google = document.querySelector(".google")
+//$google.style.setProperty("text-decoration","none")
+
+
+$google.style.setProperty("display","block")
+
+$google.style.width = "50%";
+
+$google.style.textAlign = "center";
+
+$google.style.marginLeft = "auto";
+
+$google.style.marginRight = "auto";
+
+$google.style.padding = "1rem";
+
+$google.style.borderRadius = ".5rem";
+
+console.log($google.getAttribute("style"))
+
+
+
+// AGREGANDO Y QUITANDO CLASES DE CSS con los metodos del classList
+
+const $estilos_card = document.querySelector(".card")
+console.log($estilos_card) // muestra la etiqueta figure con la clase card 
+
+console.log($estilos_card.className)
+
+console.log($estilos_card.classList) // obtiene otros metodos
+
+console.log($estilos_card.classList.contains("rotate-45")) //busca y dice si existe la clase y regresa un boleano
+
+$estilos_card.classList.add("rotate-45")
+console.log($estilos_card.className)
+
+console.log($estilos_card.classList.contains("rotate-45")) 
+
+$estilos_card.classList.remove("rotate-45")
+console.log($estilos_card.className)
+
+// TOOGLE ES UN SWITCH
+$estilos_card.classList.toggle("rotate-45")
+console.log($estilos_card.classList.contains("rotate-45")) 
+/*
+$estilos_card.classList.toggle("rotate-45")
+console.log($estilos_card.classList.contains("rotate-45")) 
+
+
+/// Remplazando la clase
+$estilos_card.classList.replace("rotate-45","rotate-135")
+
+/// Agregar varias clases de golpe
+$estilos_card.classList.add("opacity-80","sepia")
+
+
+/// LOS 4 METODOS Y QUE HACE QUE COSA - ENTREVISTA TECNICA
+
+//* innerText ----> Esta en desuso todavia funciona pero fue creada para el navegador Internet Explorer
+
+ ///! $contenedor.innerText = text // Te detecta hasta los enters que des y no detecta las etiquetas HTM
+
+//* textContent ----> Fue creada para insertar solo texto 
+///! $contenedor.textContent = text // detecta el texto y lo muestra plano y sigue sin detectar las etiquetas HTML
+
+//* innerHTML ---> Inserta Texto y codigo HTML
+///! $contenedor.innerHTML = text // ya detecta las etiquetas HTML 
+
+//* outerHTML ---> Remplaza lo que tu hayas seleccionado por el contenido nuevo que se va a agregar "Remplaza" 
+//* se llega ocupar en Frontend Moderno mas de React 
+
+
+const $contenedor = document.querySelector("#texto")
+
+let text = `
+<p>
+El modelo de Objetos del Documento (<b><i>Document Object Model </i> </b>) Es una API para documentos HTML Y XML
+</p>
+<p>
+Este provee una representación estructural del Documento, Permitiendo Modificar su contenido y Presentación visual mediante su Codigo JS
+</p> 
+<p> 
+<mark> El DOM no es parte de la especificacion de JS, es una API para los navegadores
+</mark>
+</p>
+`
+$contenedor.innerHTML = text 
+
+///NODOS Y ELEMENTOS
+
+const $cards = document.querySelector(".cards")
+console.log($cards)
+console.log($cards.children)
+console.log($cards.children[2])
+console.log($cards.childNodes)
+console.log($cards.firstChild)
+console.log($cards.firstElementChild) // el primer elemento 
+console.log($cards.lastElementChild) // el ulitmo elemento
+console.log($cards.previousElementSibling) // muestra la etiqueta al mismo nivel
+console.log($cards.nextElementSibling) // muestra la siguiente etiqueta al mismo nivel 
+console.log($cards.closest("main")) // ayuda a identificar los elementos que existan en el html
+
+
+///* EJEMPLO CORRECTO PARA CREAR UNE ELEMNTO EN HTML DESDE EL DOM
+const $figure = document.createElement("figure")
+const $img = document.createElement("img")
+const $figcaption = document.createElement("figcaption")
+const $figcaptiontext = document.createTextNode("Hola Mundo!")
+const $cards = document.querySelector(".cards")
+
+//* CREANDO HTML 
+$cards.appendChild($figure)
+$figure.classList.add("card")
+$figure.appendChild($img)
+$img.setAttribute("src","../img/cristiano.jpg")
+$figure.appendChild($figcaption)
+$figcaption.appendChild($figcaptiontext)
+
+*/
+
+const $figure = document.createElement("figure")
+const $figure2 = document.createElement("figure")
+const $img = document.createElement("img")
+const $figcaption = document.createElement("figcaption")
+const $figcaptiontext = document.createTextNode("Hola Mundo!")
+const $cards = document.querySelector(".cards")
+
+// CREANDO HTML 
+$cards.appendChild($figure)
+$figure.classList.add("card")
+$figure.appendChild($img)
+$img.setAttribute("src","../img/cristiano.jpg")
+$figure.appendChild($figcaption)
+$figcaption.appendChild($figcaptiontext)
+
+$figure2.innerHTML = `
+    <img src="../img/logo-javascript.png" alt="Logo de JS"> 
+    <figcaption> Segunda Card Creada </figcaption>
+
+`;
+
+$figure2.classList.add("card")
+
+$cards.appendChild($figure2)

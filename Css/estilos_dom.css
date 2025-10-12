@@ -1,0 +1,39 @@
+.listado{
+    background-color: antiquewhite;
+}
+.google{
+    background-color: red;
+}
+
+:root{
+    --yellow-color: yellow;
+    --dark-color: black;
+}
+
+.cards{
+    border: solid 1px var(--dark-color);
+    padding: 1rem;
+}
+.card{
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+.card figcaption{
+    padding: 1rem;
+}
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+.rotate-135{
+    transform: rotate(135deg);
+}
+
+.opacity-80{
+    opacity: .8;
+}
+
+.sepia{
+  filter: sepia(1);  
+}
