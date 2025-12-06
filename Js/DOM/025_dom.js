@@ -226,11 +226,13 @@ console.log($estilos_card.classList) // obtiene otros metodos
 console.log($estilos_card.classList.contains("rotate-45")) //busca y dice si existe la clase y regresa un boleano
 
 $estilos_card.classList.add("rotate-45")
+
 console.log($estilos_card.className)
 
 console.log($estilos_card.classList.contains("rotate-45")) 
 
 $estilos_card.classList.remove("rotate-45")
+
 console.log($estilos_card.className)
 
 // TOOGLE ES UN SWITCH
@@ -295,7 +297,7 @@ console.log($cards.nextElementSibling) // muestra la siguiente etiqueta al mismo
 console.log($cards.closest("main")) // ayuda a identificar los elementos que existan en el html
 
 
-///* EJEMPLO CORRECTO PARA CREAR UNE ELEMNTO EN HTML DESDE EL DOM
+///* EJEMPLO CORRECTO PARA CREAR UNE ELEMENTO EN HTML DESDE EL DOM
 const $figure = document.createElement("figure")
 const $img = document.createElement("img")
 const $figcaption = document.createElement("figcaption")
@@ -310,8 +312,7 @@ $img.setAttribute("src","../img/cristiano.jpg")
 $figure.appendChild($figcaption)
 $figcaption.appendChild($figcaptiontext)
 
-*/
-
+///* CREANDO 2 CARDS CON DOM
 const $figure = document.createElement("figure")
 const $figure2 = document.createElement("figure")
 const $img = document.createElement("img")
@@ -319,7 +320,7 @@ const $figcaption = document.createElement("figcaption")
 const $figcaptiontext = document.createTextNode("Hola Mundo!")
 const $cards = document.querySelector(".cards")
 
-// CREANDO HTML 
+///? CREANDO HTML 
 $cards.appendChild($figure)
 $figure.classList.add("card")
 $figure.appendChild($img)
@@ -336,3 +337,137 @@ $figure2.innerHTML = `
 $figure2.classList.add("card")
 
 $cards.appendChild($figure2)
+
+///* un bucle que imprima las 4 estaciones del año para imprimirlo en la lista
+
+const estaciones = ["primavera","verano","otoño","invierno"]
+
+const $ul = document.createElement("ul")
+
+document.writeln("<h3>Estaciones del año</h3>")
+
+document.body.appendChild($ul) // esto lo imprime en el front
+
+estaciones.forEach(estacion => {
+      const $li = document.createElement("li")
+      $li.textContent = estacion
+      $ul.appendChild($li) 
+});
+
+
+///! Imprimir igual con un bulce y con la propiedad INNER HTML
+
+const continentes = ["Africa","America","Europa","Asia","Oceania"]
+
+const $ul = document.createElement("ul")
+
+document.writeln("CONTINENTES DEL MUNDO")
+
+continentes.forEach(continente => {
+     $ul.innerHTML += `<li>${continente}</li>`   
+});
+
+document.body.appendChild($ul)
+
+///! Iterando un bucle ocupando Document Fragment
+const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"] 
+
+const $ul = document.createElement(`ul`)
+
+const $fragment = document.createDocumentFragment()
+
+meses.forEach(mes =>{
+    const $li = document.createElement(`li`)
+    $li.textContent = mes
+    $fragment.appendChild($li)
+})
+
+$ul.appendChild($fragment)
+
+document.body.appendChild($ul)
+
+
+//!
+
+const $cards = document.querySelector("cards")
+const $template = document.getElementById("template-card").content
+const $fragment = document.createDocumentFragment()
+const $card_content = [
+    {
+        title:"Perro_1",
+        img:"https://placedog.net/500/g"
+    },
+    {
+        title:"Perro_2",
+        img:"https://placedog.net/500/g"
+    },
+    {
+        title:"Perro_3",
+        img:"https://placedog.net/500/g"
+    },
+    {
+        title:"Perro_4",
+        img:"https://placedog.net/500/g"
+    },
+    {
+        title:"Perro_5",
+        img:"https://placedog.net/500/g"
+    }
+]
+$card_content.foreach(card=>{
+    $template.querySelector("img")
+    //agregar los atributos src y alt a la etiqueta img con .set atribute
+    // 
+})
+
+///! EJERCICIOS DOM
+//* Imprimir un hola mundo dando click en el boton desde el html
+const $button = document.getElementById("hola-mundo")
+
+$button.addEventListener("click",()=>{
+    console.log("Hola mundo")
+})
+
+//* modificar el texto de el html desde js 
+const $text = document.getElementById("texto2")
+$text.textContent = "Hola soy Hugo"
+
+//* Cambiando la primera imagen de las cards
+///! VERSION HUGO
+
+const $card = document.getElementById("primera-card")
+$card.setAttribute("src","/img/logo-javascript.png")
+
+///? VERSION RICK
+const $card = document.getElementById("primera-card")
+$card.src = "/img/logo-javascript.png"
+
+//* agregar una clase a una etiqueta html de texto y cambiar su background
+
+///!VERSION HUGO
+
+const $texto = document.getElementById("texto2")
+$texto.classList.add("background-text")
+$texto.querySelector(".background-text")
+$texto.style.backgroundColor = "blue"
+
+///? VERSION RICK
+const $texto = document.querySelector("div p")
+$texto.classList.add("clase-nueva")
+
+
+//* Agregar dos clases de css a un texto que existen en el HTML
+const $texto = document.querySelector("div p")
+$texto.classList.add("clase-nueva","otra-clase-nueva")
+*/
+
+//* El boton de Hola mundo del Dom imprima en el HTML la frase hola mundo n veces
+
+const $button = document.getElementById("hola-mundo")
+const $contenedor = document.getElementById("texto-desde-dom")
+const $texto = document.createElement("p")
+
+$button.addEventListener("click",()=>{
+    $contenedor.appendChild($texto)
+    $texto.textContent = "HOLA MUNDO"
+})

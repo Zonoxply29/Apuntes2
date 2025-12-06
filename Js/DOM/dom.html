@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/estilos_dom.css">
+    <link rel="stylesheet" href="estilos_dom.css">
     <title>DOM</title>
 </head>
 
@@ -22,7 +22,7 @@
     <div>
         <section class="cards">
             <figure class="card">
-                <img src="img/cristiano.jpg" alt="">
+                <img src="img/cristiano.jpg" alt="" id="primera-card">
                 <!--SIRVE PARA AGREGAR EL NOMBRE DE LA IMAGEN-->
                 <figcaption>
                     Cristiano
@@ -64,7 +64,31 @@
         </main>
     </div>
 
-    <script src="Js/025_dom.js"></script>
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption>
+                
+            </figcaption>
+        </figure>
+    </template>
+
+    <hr>
+
+    <button id="hola-mundo">
+        Soy hola mundo
+    </button>
+
+    <div id="texto-desde-dom">
+        
+    </div>
+
+    <div id="texto2">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam voluptates? Dolorum deleniti, rerum illum esse vel nisi perspiciatis minima at? Sunt, dignissimos qui dolorem at quis dolor ex assumenda?</p>
+    </div>
+
+
+    <script src="025_dom.js"></script>
 </body>
 
 </html>
