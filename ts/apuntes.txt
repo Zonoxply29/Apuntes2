@@ -1,0 +1,35 @@
+TypeScript se Creo para evitar los errores que se pueden cometer en lenguaje de "debil tipado"
+
+TypeScript te permite decir que tipo de dato va en una variable y que tipo de dato va a recibir el parametro
+
+Con TypeScript muestra algún error antes de que se ejecute
+
+EcmaScript 6 es el nombre formal de JS y despues de esas versiones es EsNext para futuras versiones 
+
+Como TypeScript transpila el codigo a Js
+
+
+Comandos para TS
+tsc --v --> Te muestra la Version
+tsc --watch --> para correr el proyecto
+
+
+Para que el codigo de TypeScript funcione en el navegador se tiene que modificar el archivo de configuracion
+cambiando el archivo y diciendole que es de JS para el navegador
+
+
+En una constante no cambia su valor para typescript el tipo de dato de nombre es constante y queda el tipo de dato tal cual 
+
+en cambio en la variable let define el tipo de dato
+
+La buena practica es poner que tipo de dato deben de recibir en las variables
+
+let numero:number = 20
+let apellido:string = "Gomez"
+
+Con esto se puede declarar el tipo de dato que unicamente va a recibir esa variable
+
+
+TypeScript supone que todo lo que pone el programador es correcto 
+También en el navegador se debe agregar la etiqueta type="module" para que entendiera que esta bien el archivo de configuración
+Pasa lo nuevo trampilado a el archivo js
