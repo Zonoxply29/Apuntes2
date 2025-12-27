@@ -43,3 +43,12 @@
 .otra-clase-nueva{
     font-size: 50px;
 }
+/***************************************************/
+.contenedor-estilos{
+    height: 120px;
+    width: 120px;
+    background-color: blue;
+}
+.contenedor-nuevos-estilos{
+    background-color: yellow;
+}

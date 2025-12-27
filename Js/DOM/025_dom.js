@@ -459,7 +459,6 @@ $texto.classList.add("clase-nueva")
 //* Agregar dos clases de css a un texto que existen en el HTML
 const $texto = document.querySelector("div p")
 $texto.classList.add("clase-nueva","otra-clase-nueva")
-*/
 
 //* El boton de Hola mundo del Dom imprima en el HTML la frase hola mundo n veces
 
@@ -469,5 +468,49 @@ const $texto = document.createElement("p")
 
 $button.addEventListener("click",()=>{
     $contenedor.appendChild($texto)
-    $texto.textContent = "HOLA MUNDO"
+    $texto.textContent += "HOLA MUNDO"
+})
+
+//* Refactorizacion de el codigo
+
+const $button = document.getElementById("hola-mundo")
+const $frase = document.getElementById("texto-desde-dom")
+
+
+$button.addEventListener("click",()=>{
+    $frase.innerHTML += `<h1>HOLA MUNDO</h1>` 
+})
+
+//* crear una imagen desde el dom
+const $button = document.getElementById("hola-mundo")
+const $contenedor = document.getElementById("imagen-dom")
+const $imagen = document.createElement("img")
+
+$button.addEventListener("click",()=>{
+    $contenedor.appendChild($imagen)
+    $imagen.setAttribute("src","/img/cristiano.jpg")
+})
+
+//* AHora debe de mostrar dos imagenes distintas al volver a dar click 
+///! ESTA INCOMPLETO EL EJERCICIO
+/*
+const $button = document.getElementById("hola-mundo")
+const $contenedor = document.getElementById("imagen-dom")
+const $imagen = document.createElement("img")
+
+$button.addEventListener("click",()=>{
+    $contenedor.appendChild($imagen)
+    $imagen.setAttribute("src","/img/cristiano.jpg")
+})
+*/
+
+//* un div desde mi html debe de tener un ancho y un alto predeterminado con un 
+//* background color que cambie desde un boton al dar click
+
+const $button = document.getElementById("boton-cambiador")
+const $contenedor = document.getElementById("contenedor-color")
+
+$button.addEventListener("click",()=>{
+    //$contenedor.querySelector(".contenedor-estilos")
+    $contenedor.classList.toggle("contenedor-nuevos-estilos")
 })
