@@ -1,5 +1,17 @@
 /*
+//* una expresion de funcion el nombre no debe de ir 
 
+//* en una declaracion de funcion es necesario colocar un nombre
+
+-----------------------------------------------------------------
+///? Hoisting -> podemos ocupar una funcion incluso antes de que la declaremos en el codigo solo aplica en declaraciones de funcion
+
+Saludar()
+
+function Saludar(){
+  console.log("Hola Mundo")
+}
+------------------------------------------------------------------  
 NUNCA OCUPAR UNA FUNCION FLECHA DENTRO DE UN OBJETO PORQUE VA APUNTAR A WINDOW EL PADRE DE TODAS LAS FUNCIONES
 
 console.log(window.document)*/
@@ -293,7 +305,6 @@ console.log("antes de actualizar",usuarioriginal)
 actualizarusuario(usuarioriginal.nombre,edad)
 console.log("despues de actualizar",usuarioriginal)
 
-*/
 
 let actualizarusuario =(a)=>{
     a.nombre = "Gustavo";  
@@ -309,4 +320,28 @@ console.log("antes de actualizar",usuarioriginal)
 
 actualizarusuario(usuarioriginal)
 console.log("despues de actualizar",usuarioriginal)
+-----------------------------------------------------------
+Ejercicio de codigo Facilito de Funciones Flecha
+En tu primer trabajo tech comienzas ganando 10 USD por hora m lo que te permitira contratar una memebresia de cursos que cuesta
+13 USD , ahora necesitas saber cuantos meses de Suscripcion puedes contratar con lo ganado en tu primer semana de trabajo
+
+Crear una funcion que reciba la cantidad de horas que has trabajado y retonre el dinero que has ganado
+
+Crear una funcion que reciba la cantidad de dinero que has ganado y te diga cuantos meses de Suscripcion puedes
+adquirir con ese dinero
+
+- CONDICIONALES
+No puedes comprar medio mes , ni gastar mas de lo que has ingresado
+Usar la sintaxis flecha y retorno implicito
+
+let horasChamba = (horas) => horas * 10
+let mesesDeSuscripcion = (monto) => parseInt(monto / 13)
+
+let procesarMesesyPago = (horas) => mesesDeSuscripcion(horasChamba(horas))
+
+console.log(procesarMesesyPago(30))
+
+*/
+
+
 
