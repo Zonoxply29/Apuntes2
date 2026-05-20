@@ -304,9 +304,9 @@ for(i=0; i<=100; i++){
         console.log(i)
     }
 }
-*/
 
-/////    CONDICIONAL EN UNA FUNCION OCUPANDO UN OBJETO MAPEANDO LOS DIAS DE LA SEMANA   /////
+
+///!    CONDICIONAL EN UNA FUNCION OCUPANDO UN OBJETO MAPEANDO LOS DIAS DE LA SEMANA   /////
 let diaseleccionados = (dia) =>{
         // Se define un objeto 'dias' que mapea los días de la semana a sus respectivos mensajes
     let dias ={
@@ -328,3 +328,81 @@ let diaseleccionados = (dia) =>{
 }
 
 diaseleccionados(("lunes"))
+
+*/
+
+// ! CICLO WHILE
+//* una de las principales caracterisitcas de este ciclo es que la condicion se ejecutará 
+//* antes de ejecutar las declaraciones en cada iteración
+
+// Creamos un ejercicio basico donde pide que pases el valor de un numero y se va a ir iterando y cuando quieras parar 
+// solo presionas 0 y te da el total de la suma de los numeros
+
+//! Durante este ejercicio pude notar el primer error que tuve que fue dejar la varible de "totalAcumulado" sin asignar un valor
+//? esto nos dio como resultado que al momento de sumar el valor que ingresaras mas la variable sin valor dieran NaN osea "Not a Number"
+//? porque internamente js trata de resolverlo y al no ser un numero con lo que este sumando te lo hace saber
+let numeroRecibido = 1;
+// let totaAcumulado;
+let totalAcumulado = 0;
+
+while(numeroRecibido !== 0){ // siempre que la condicion sea verdadera se repite el ciclo cuando deja de serlo para
+  numeroRecibido = Number(
+    prompt("Dame un numero o escribe 0 para terminar")
+  );
+  totaAcumulado = totaAcumulado + numeroRecibido;
+}
+console.log(totaAcumulado) // 5 + 5 + 5 = 20 hasta que des clic en 0 y pare de sumar
+
+// ! DO WHILE
+//* La principal diferencia con el while es que las declaraciones se ejecutan antes de evaluar la condición, por lo que 
+//* en todo caso aseguramos que se evaluén una vez
+
+let numeroRecibido;
+let totalAcumulado = 0;
+  
+do{ // primero ejecuta estas instrucciones si "NINGUNA CONDICION"
+  numeroRecibido = Number(
+    prompt("Dame un numero o escribe 0 para terminar")
+  );
+ 
+  totaAcumulado = totaAcumulado + numeroRecibido;
+  
+}while (numeroRecibido !== 0) // ejecuto la condicion y asi susesivamente hasta que sea falso y pare el programa
+
+  console.log(totaAcumulado)
+  
+
+// Ejercicio Numero Magico
+let numeroMagico = Math.floor(Math.random() * 101);
+let numeroIngresado;
+do{
+    numeroIngresado = Number(
+        prompt("Ingresa un numero y adivina el numero magico")
+    );
+
+    // Validaciones previas: entrada no numérica y rango
+    if (isNaN(numeroIngresado)) {
+        alert("No ingresaste un numero valido");
+        continue;
+    }
+
+    if (numeroIngresado < 0 || numeroIngresado > 100) {
+        alert("Estas fuera del rango 0-100");
+        continue;
+    }
+
+    if(numeroIngresado > numeroMagico){
+        alert("el numero es menor")
+    }else if(numeroIngresado < numeroMagico){
+        alert("El numero es mayor")
+    }else if (numeroIngresado === numeroMagico){
+        alert("Felicidades, adivinaste el numero ingresado")
+    }else if (numeroIngresado === NaN){
+        alert("No ingresaste un numero valido")
+    }else if (numeroIngresado <0 || numeroIngresado > 100){
+        alert("Estas fuera del rango 0-100")
+    }else{
+        alert("¡Felicidades Adivinaste")
+    }
+    
+}while (numeroIngresado !== numeroMagico)

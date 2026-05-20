@@ -1,0 +1,106 @@
+/**MENU**/
+@media (min-width:450px) {
+    a.navbar-brand{
+       width:15%!important;   
+    }
+}
+/**Hero**/
+.hero{
+    height: 25rem;
+}
+/**Categorias**/
+.categoria{
+    height: 20rem;
+}
+p{
+    font-weight: bold;
+}
+@media (min-width:450px) {
+    .categoria{
+        height: 40rem;
+    }
+    .text-categoria{
+       padding: 5rem!important;
+    }
+}
+/** Bievenidos y imagen con rectangulo azul arriba- **/
+.btn-geolocalizacion{
+    border: 1px solid #000;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+.imagen{
+    position: relative;
+    width: 100%;
+}
+.rectangulo-azul{
+    position: absolute;
+    top: 99rem;
+    left: 26rem;
+    background-color:#3848d6;
+    color: white;
+    text-align: right;
+    padding: 0.4rem 1rem;
+    font-size: 2.1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    line-height: 1.2;
+    z-index: 2;
+    min-width: 203px;
+}
+.rectangulo-azul small{
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: block;
+}
+.vendidos-text{
+    position: absolute;
+    z-index: 2;
+    top:101rem;
+    right: 68px;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+@media(max-width: 768px){
+    .rectangulo-azul{
+        top: 118rem;
+        left: 1rem;
+        font-size: 3rem;
+        min-width: 200px;
+    }
+    .vendidos-text{
+        top:126rem;
+        font-size: 3rem;
+        right: 3rem;
+    }
+}
+@media(max-width: 575px){
+    .rectangulo-azul{
+        top: 95rem;
+        left: 0rem;
+        font-size: 1rem;
+    }
+    .vendidos-text{
+        top:100rem;
+        font-size: 1.5rem;
+        right: 2rem;
+    }
+}
+@media(max-width: 320px){
+    .rectangulo-azul{
+        top: 99rem;
+        left: 1rem;
+        font-size: 1.1rem;
+        min-width: 100px;
+    }
+    .vendidos-text{
+        top:92rem;
+        font-size: 2rem;
+        right: 3rem;
+    }
+
+}

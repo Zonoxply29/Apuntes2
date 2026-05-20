@@ -7,9 +7,9 @@
     <title>Javascript</title>
 </head>
 <body>
-    <header>
+    <header id="menu">
         <div class="logo">
-            <a href="index.html">
+            <a href="index.html" class="inicio" target="_blank" data-description="hola mundo" data-perro="soy el id">
                 <img src="/img/logo-javascript.png" alt="logo-javascript" height="150" width="150">
             </a>
         </div>
@@ -49,7 +49,7 @@
         </div>
     </header>
     <section>
-        <ul class="apuntes">
+        <ul class="apuntes" style="background-color: greenyellow;">
             <li>
                 <a href="">Variables y constantes</a>
             </li>
@@ -173,7 +173,14 @@
     <button onclick="showCountries()">
         mostrar Paises
     </button>
-    <div id="feed"></div>
-    <script src="Js/028_async_await.js"></script>
+    <input type="text" name="nombre">
+    <div id="feed">
+        <h2>Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus necessitatibus iste fugit, aliquid in eos laborum at autem aperiam asperiores quasi ratione esse unde, dicta nostrum veritatis architecto non eum.</p>
+        <ul>
+            <li>LISTA</li>
+        </ul>
+    </div>
+    <script src="Js/025_dom.js"></script>
 </body>
 </html>

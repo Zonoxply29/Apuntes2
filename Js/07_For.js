@@ -69,4 +69,30 @@ EJEMPLO FOR ANIDADO IMPRIMIENDO DEL 10 AL 1 CON DECIMALES
 REPASADO POR ULTIMA VEZ TODOS EL 21 DE DICIEMBRE DEL 2023
 
 REPASADO DE NUEVO EL 22 DE AGOSTO DEL 2024 XD
+-----------------------------------------------------
+REPASO EN CODIGO FACILITO DE CICLOS FOR 19/05/2026
+/*
+//* Mi solucion  -> Debe de recorrer de 3 en 3 y solo imprime números pares del 0 al 100 
+for(let contador=0; contador <= 100; contador= contador +3){
+  if(contador % 2 === 0){
+     console.log(contador)
+   }
+}
+
+///? Solucion de el codigo facilito
+for(let i=0; i <= 100; i = i + 3){
+    i % 2 === 0 ? console.log(i) : null;  
+}
+For in -> Nos permite iterar sobre las propiedades enumerables de un OBJETO
+
+let user = {
+  name : 'Hugo',
+  edad : 22
+}
+for(let property in user){
+  console.log(property) -> "name" ,"edad"
+}
+
+-
 */
+
